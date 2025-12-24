@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopedia Art Curation Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: #1a1a1a;
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #f0f0f0;
+        }
+        
+        header p {
+            color: #888;
+            font-size: 1.1rem;
+        }
+        
+        .controls {
+            background: #222;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .controls label {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .controls select, .controls input {
+            background: #333;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .controls select:focus, .controls input:focus {
+            outline: none;
+            border-color: #666;
+        }
+        
+        .filter-btn {
+            background: #333;
+            border: 1px solid #444;
+            color: #ccc;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #4a7c59;
+            border-color: #4a7c59;
+            color: #fff;
+        }
+        
+        .stats {
+            text-align: center;
+            padding: 15px;
+            background: #1f1f1f;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: #252525;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        
+        .card.recommended {
+            border: 2px solid #4a7c59;
+        }
+        
+        .card.top-pick {
+            border: 2px solid #d4af37;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #f0f0f0;
+        }
+        
+        .card-file {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .card-verdict {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .verdict-yes { background: #4a7c59; color: #fff; }
+        .verdict-decent { background: #5a5a2a; color: #fff; }
+        .verdict-weak { background: #6a4a3a; color: #fff; }
+        .verdict-no { background: #4a3a3a; color: #aaa; }
+        
+        .card-batch {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+        }
+        
+        .card-rank {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #d4af37;
+            color: #000;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            display: flex;
+            flex-direction: row;
+            max-width: 1400px;
+            margin: auto;
+            padding: 20px;
+            gap: 30px;
+            width: 100%;
+        }
+        
+        @media (max-width: 900px) {
+            .modal-content {
+                flex-direction: column;
+            }
+        }
+        
+        .modal-image-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        
+        .modal-info {
+            flex: 0 0 350px;
+            background: #252525;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 5px;
+            color: #f0f0f0;
+        }
+        
+        .modal-file {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .modal-section {
+            margin-bottom: 20px;
+        }
+        
+        .modal-section h3 {
+            color: #888;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .modal-section p {
+            color: #ccc;
+            font-size: 1rem;
+        }
+        
+        .modal-verdict {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        .modal-rank-badge {
+            background: linear-gradient(135deg, #d4af37 0%, #b8960c 100%);
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .close-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            border: none;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: background 0.2s;
+        }
+        
+        .close-btn:hover {
+            background: #555;
+        }
+        
+        .nav-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #333;
+            border: none;
+            color: #fff;
+            width: 50px;
+            height: 80px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: background 0.2s;
+        }
+        
+        .nav-btn:hover {
+            background: #555;
+        }
+        
+        .nav-prev { left: 10px; border-radius: 0 8px 8px 0; }
+        .nav-next { right: 10px; border-radius: 8px 0 0 8px; }
+        
+        /* Top picks section */
+        .top-picks-section {
+            background: #1f1f1f;
+            padding: 40px 30px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .top-picks-section h2 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #d4af37;
+        }
+        
+        .tier {
+            margin-bottom: 30px;
+        }
+        
+        .tier h3 {
+            color: #888;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #4a7c59;
+        }
+        
+        .tier-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tier-item {
+            background: #2a2a2a;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .tier-item:hover {
+            background: #4a7c59;
+        }
+        
+        .tier-item .rank {
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encyclopedia Art Curation</h1>
+        <p>100 vintage encyclopedia pages reviewed for wall art potential</p>
+    </header>
+    
+    <div class="controls">
+        <div>
+            <label>Filter: </label>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="yes">Recommended</button>
+            <button class="filter-btn" data-filter="decent">Decent</button>
+            <button class="filter-btn" data-filter="no">Not Recommended</button>
+        </div>
+        <div>
+            <label>Batch: </label>
+            <select id="batchFilter">
+                <option value="all">All Batches</option>
+                <option value="1">Batch 1</option>
+                <option value="2">Batch 2</option>
+                <option value="3">Batch 3</option>
+                <option value="4">Batch 4</option>
+                <option value="5">Batch 5</option>
+            </select>
+        </div>
+        <div>
+            <label>Sort: </label>
+            <select id="sortOrder">
+                <option value="rank">By Rank</option>
+                <option value="file">By File Number</option>
+                <option value="batch">By Batch</option>
+            </select>
+        </div>
+        <div>
+            <input type="text" id="searchBox" placeholder="Search subjects...">
+        </div>
+    </div>
+    
+    <div class="stats" id="stats">Showing 100 images</div>
+    
+    <section class="top-picks-section">
+        <h2>★ Top 20 Picks ★</h2>
+        <div class="tier">
+            <h3>Tier 1: Outstanding</h3>
+            <div class="tier-items" id="tier1"></div>
+        </div>
+        <div class="tier">
+            <h3>Tier 2: Excellent</h3>
+            <div class="tier-items" id="tier2"></div>
+        </div>
+        <div class="tier">
+            <h3>Tier 3: Very Good</h3>
+            <div class="tier-items" id="tier3"></div>
+        </div>
+        <div class="tier">
+            <h3>Tier 4: Good</h3>
+            <div class="tier-items" id="tier4"></div>
+        </div>
+    </section>
+    
+    <div class="gallery" id="gallery"></div>
+    
+    <div class="modal" id="modal">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <button class="nav-btn nav-prev" onclick="navigate(-1)">‹</button>
+        <button class="nav-btn nav-next" onclick="navigate(1)">›</button>
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <img class="modal-image" id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-file" id="modalFile"></p>
+                
+                <div class="modal-section">
+                    <h3>Wall Art Verdict</h3>
+                    <span class="modal-verdict" id="modalVerdict"></span>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Description</h3>
+                    <p id="modalDescription"></p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Notes</h3>
+                    <p id="modalNotes"></p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Batch</h3>
+                    <p id="modalBatch"></p>
+                </div>
+                
+                <div class="modal-section" id="modalRankSection" style="display:none;">
+                    <h3>Overall Ranking</h3>
+                    <div class="modal-rank-badge" id="modalRank"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+const imageData = [
+    // Batch 1
+    { file: "5718", subject: "British Wild Flowers", description: "Botanical illustration, numbered specimens (poppy, rose, honeysuckle, gentian). Vibrant colors on cream.", verdict: "yes", notes: "Classic botanical. Strong reds, blues, yellows. Versatile.", batch: 1, rank: 16 },
+    { file: "5723", subject: "Weighing Room at the Mint", description: "Color photo, woman with bronze coins pouring from scales.", verdict: "no", notes: "Documentary/industrial.", batch: 1 },
+    { file: "5728", subject: "Double Peonies", description: "Color photo, pink/red peonies in garden setting.", verdict: "decent", notes: "Pretty but standard garden photo.", batch: 1 },
+    { file: "5733", subject: "Pelicans", description: "Color photo, white pelicans at zoo. Glare damage on page.", verdict: "no", notes: "Zoo photo, damaged.", batch: 1 },
+    { file: "5738", subject: "Westminster Bridge/Thames", description: "Aerial color photo, red buses, river boats.", verdict: "decent", notes: "Nice colors but very 'London postcard.'", batch: 1 },
+    { file: "5743", subject: "Circus (Big Parade & Clowns)", description: "B&W, circus ring and two clown portraits.", verdict: "no", notes: "B&W, niche subject.", batch: 1 },
+    { file: "5748", subject: "Map of Wales", description: "Color topographical map showing coastline and mountains.", verdict: "decent", notes: "Good if you want Wales specifically.", batch: 1 },
+    { file: "5753", subject: "Telephone Exchanges", description: "B&W, women operators at switchboards.", verdict: "no", notes: "Documentary, B&W.", batch: 1 },
+    { file: "5758", subject: "Chess", description: "B&W, young girl playing chess.", verdict: "no", notes: "B&W, too specific.", batch: 1 },
+    { file: "5763", subject: "Canal Boat 'Shamrock'", description: "Color, decorated narrowboat with folk art paintings.", verdict: "yes", notes: "Folk art quality. Colorful, unique.", batch: 1 },
+    { file: "5768", subject: "Sioux Chieftain", description: "Color illustration, Native American couple in traditional dress.", verdict: "weak", notes: "Dated ethnographic framing.", batch: 1 },
+    { file: "5773", subject: "Tanganyika", description: "B&W, woman processing sisal fibers.", verdict: "no", notes: "Documentary, colonial framing.", batch: 1 },
+    { file: "5778", subject: "New York City", description: "Color photo through window grid, Manhattan skyline.", verdict: "decent", notes: "Interesting composition but muted.", batch: 1 },
+    { file: "5783", subject: "Montgolfier Balloon", description: "Color illustration, ornate blue/gold hot air balloon.", verdict: "yes", notes: "Distinctive. Great conversation piece.", batch: 1, rank: 17 },
+    { file: "5788", subject: "Tawny Owl", description: "Color illustration, two owls on branch, dark woodland setting.", verdict: "decent", notes: "Atmospheric but dark.", batch: 1 },
+    { file: "5793", subject: "Greek Temple (Parthenon)", description: "Color photo, ancient ruins with columns.", verdict: "weak", notes: "Standard travel photo.", batch: 1 },
+    { file: "5798", subject: "British Bird Eggs", description: "Color illustration, 38 eggs arranged on olive background.", verdict: "yes", notes: "Cabinet of curiosities appeal. Excellent.", batch: 1, rank: 8 },
+    { file: "5805", subject: "Australia (Coastal/Dry River)", description: "Color photos, Queensland coast and dry riverbed.", verdict: "no", notes: "Generic landscape photos.", batch: 1 },
+    { file: "5810", subject: "Choice Apples", description: "Color botanical illustration, 9 apple varieties, rich reds/greens.", verdict: "yes", notes: "Kitchen/dining perfect. Rich, warm.", batch: 1, rank: 6 },
+    { file: "5815", subject: "Maori Carvings", description: "Color photo, wooden gateway with traditional figures.", verdict: "decent", notes: "Cultural interest but busy composition.", batch: 1 },
+    
+    // Batch 2
+    { file: "5717", subject: "Lilac Blossom", description: "Color photos, purple lilac trees and close-up blooms.", verdict: "decent", notes: "Soft, pretty. A bit washed out.", batch: 2 },
+    { file: "5722", subject: "Frilled Lizard", description: "Color illustration, lizard with neck frill extended, blue/yellow/green.", verdict: "decent", notes: "Unusual. Natural history curiosity.", batch: 2 },
+    { file: "5727", subject: "British Moths", description: "Color illustration, ~16 moth species, yellows/browns/pinks.", verdict: "decent", notes: "Similar to butterflies but more muted.", batch: 2 },
+    { file: "5732", subject: "Robin in Spring", description: "Color photo, robin among pink crocuses. Some glare.", verdict: "weak", notes: "Soft, washed out.", batch: 2 },
+    { file: "5737", subject: "Mars ('Imagine Yourself on Mars')", description: "Color Bonestell illustration, Martian landscape, orange/purple/blue.", verdict: "yes", notes: "Retro sci-fi masterpiece. Unique.", batch: 2, rank: 7 },
+    { file: "5742", subject: "Fungi", description: "B&W photos, various mushroom species.", verdict: "no", notes: "B&W, low contrast.", batch: 2 },
+    { file: "5747", subject: "Flags of Nations", description: "Color illustration, ~50 world flags on blue background.", verdict: "decent", notes: "Graphic, colorful. Educational feel.", batch: 2 },
+    { file: "5752", subject: "Fishery Workers", description: "B&W photo, women processing herring.", verdict: "no", notes: "Documentary, B&W.", batch: 2 },
+    { file: "5757", subject: "Macaw", description: "Color photo, scarlet macaw with red/blue/green on dark background.", verdict: "decent", notes: "Striking bird but zoo-photo feel.", batch: 2 },
+    { file: "5762", subject: "Hippopotamus", description: "Color illustration, hippo with open jaws showing teeth.", verdict: "weak", notes: "Oddly specific. Browns only.", batch: 2 },
+    { file: "5767", subject: "Young Mestizo (Venezuela)", description: "B&W portrait, boy in straw hat.", verdict: "no", notes: "B&W portrait.", batch: 2 },
+    { file: "5772", subject: "British Army Uniforms", description: "Color illustration fold-out, 20 soldiers, red/blue uniforms.", verdict: "decent", notes: "Decorative if frameable. Very British.", batch: 2 },
+    { file: "5777", subject: "Diversity of Human Species", description: "B&W photos, six portrait photographs.", verdict: "no", notes: "Dated ethnographic. Avoid.", batch: 2 },
+    { file: "5782", subject: "Edinburgh Ceremony", description: "Color photo, ceremonial procession at castle.", verdict: "weak", notes: "Muted, documentary.", batch: 2 },
+    { file: "5787", subject: "Cornflowers", description: "Color photo, blue/pink/white flowers on black background.", verdict: "yes", notes: "Dramatic. Modern feel. Striking.", batch: 2, rank: 5 },
+    { file: "5792", subject: "San Remo (Italy)", description: "Color illustration, narrow street with archways.", verdict: "decent", notes: "Charming but small image.", batch: 2 },
+    { file: "5797", subject: "Irish Republic Farming", description: "Color photo, farmers with horse and cart.", verdict: "weak", notes: "Generic pastoral.", batch: 2 },
+    { file: "5803", subject: "Ibises", description: "Color photo, flock of ibises in flight over water.", verdict: "decent", notes: "Dynamic movement. Good colors.", batch: 2 },
+    { file: "5809", subject: "British Butterflies", description: "Color illustration, ~14 species including swallowtail, red admiral.", verdict: "yes", notes: "Warm oranges/yellows/reds. Excellent.", batch: 2, rank: 3 },
+    { file: "5814", subject: "Carnations", description: "Color photo, 4 carnations on blue background.", verdict: "decent", notes: "Clean, simple, elegant.", batch: 2 },
+    
+    // Batch 3
+    { file: "5716", subject: "Norwich Market Place", description: "Color photo, colorful market stalls with striped awnings, church tower.", verdict: "decent", notes: "Cheerful but busy.", batch: 3 },
+    { file: "5721", subject: "Saturn's Moons (Titan)", description: "Color Bonestell illustration, Saturn with rings rising over rocky moonscape, deep blue.", verdict: "yes", notes: "Stunning. Best single image in collection.", batch: 3, rank: 1 },
+    { file: "5726", subject: "Shore Birds & Golden Oriole", description: "Two photos: B&W oystercatchers flock, color oriole feeding chicks.", verdict: "weak", notes: "Mixed format, busy layout.", batch: 3 },
+    { file: "5731", subject: "British Butterflies (second plate)", description: "Color illustration, ~18 species including peacock, purple emperor.", verdict: "yes", notes: "More dramatic than 5809. Purple emperor standout.", batch: 3 },
+    { file: "5736", subject: "Taj Mahal", description: "Color photo, reflected in pool, classic view.", verdict: "decent", notes: "Beautiful but ubiquitous image.", batch: 3 },
+    { file: "5741", subject: "Polyanthus (Spring flowers)", description: "Color photo, red/yellow/pink primulas.", verdict: "decent", notes: "Cheerful but busy composition.", batch: 3 },
+    { file: "5746", subject: "World Forest Map", description: "Color map showing global vegetation/biome distribution.", verdict: "decent", notes: "Colorful, educational.", batch: 3 },
+    { file: "5751", subject: "United States Map", description: "Color political map, all 48 states (pre-Alaska/Hawaii).", verdict: "decent", notes: "Historical interest. Pastels.", batch: 3 },
+    { file: "5756", subject: "Paris at Night", description: "Color photos, Arc de Triomphe, Champs-Élysées, street scenes.", verdict: "weak", notes: "Dark, busy multi-photo layout.", batch: 3 },
+    { file: "5761", subject: "Canada (Wealth Above and Under)", description: "Color photos, oil derrick and lumberjacks.", verdict: "no", notes: "Industrial/resource extraction.", batch: 3 },
+    { file: "5766", subject: "Dutch Boy & Sailor", description: "Color photo, elderly man teaching boy with model ship.", verdict: "decent", notes: "Charming genre scene. Nostalgic.", batch: 3 },
+    { file: "5771", subject: "Cotton Field (US)", description: "B&W photo, woman picking cotton.", verdict: "no", notes: "Sensitive historical subject.", batch: 3 },
+    { file: "5776", subject: "Fruits (two pages)", description: "Color photos, peaches/plums/apricots and grapes/cherries/currants.", verdict: "yes", notes: "Two-page spread. Lush colors. Great for kitchen.", batch: 3 },
+    { file: "5781", subject: "Careers for Women", description: "B&W photos, policewomen, model, scientist.", verdict: "no", notes: "Documentary, B&W.", batch: 3 },
+    { file: "5786", subject: "Trooping the Colour", description: "Color photo, guards ceremony at Horse Guards Parade.", verdict: "decent", notes: "Quintessentially British. Red/black.", batch: 3 },
+    { file: "5791", subject: "Pharaohs/Egyptian Art", description: "B&W photo, ancient Egyptian carved figures.", verdict: "weak", notes: "B&W limits impact.", batch: 3 },
+    { file: "5796", subject: "Pacific Islanders", description: "Color photo, men with tall ceremonial poles/headdresses.", verdict: "weak", notes: "Ethnographic. Dated framing.", batch: 3 },
+    { file: "5802", subject: "Hindu Ritual (Ram Lila)", description: "Color photo, giant Ravana effigy at festival.", verdict: "decent", notes: "Unusual, dramatic. Niche appeal.", batch: 3 },
+    { file: "5808", subject: "Glass Flowers (Harvard)", description: "Color photo, pink rhododendron on dark leaves.", verdict: "yes", notes: "Blaschka glass flowers. Moody, painterly.", batch: 3 },
+    { file: "5813", subject: "Jellyfish", description: "Color illustration, 8 species on pale blue background, delicate tentacles.", verdict: "yes", notes: "Elegant, ethereal. Scientific illustration at best.", batch: 3, rank: 2 },
+    
+    // Batch 4
+    { file: "5715", subject: "Candle Making", description: "Color photo, worker ladling molten wax, green candles in racks.", verdict: "no", notes: "Industrial/documentary.", batch: 4 },
+    { file: "5720", subject: "Chinese Ch'ing Dynasty Vases", description: "Three vases (green, pale blue, orange) on purple velvet.", verdict: "yes", notes: "Elegant, sophisticated. Refined spaces.", batch: 4, rank: 15 },
+    { file: "5725", subject: "Cave Paintings (Altamira/Lascaux)", description: "Reproductions of prehistoric bison, horses, deer in red/brown on cream.", verdict: "yes", notes: "Primal, timeless. Art-historical gravitas.", batch: 4, rank: 9 },
+    { file: "5730", subject: "Coral Reefs", description: "Two color photos, staghorn coral and striped fish with orange coral.", verdict: "decent", notes: "Vibrant but 'nature documentary' feel.", batch: 4 },
+    { file: "5735", subject: "Swedish Scenes", description: "Two color photos, fishermen and women in field.", verdict: "no", notes: "Generic travel page.", batch: 4 },
+    { file: "5740", subject: "Platypus (Duckbill)", description: "Color photo, swimming platypus in murky water.", verdict: "decent", notes: "Quirky. Muted greens/browns. Charming for nature lovers.", batch: 4 },
+    { file: "5745", subject: "South America Map", description: "Pale pastel political map.", verdict: "weak", notes: "Low color saturation.", batch: 4 },
+    { file: "5750", subject: "Australia Map", description: "Color-coded states, reds/oranges/greens.", verdict: "decent", notes: "More colorful than South America. Good if you want maps.", batch: 4 },
+    { file: "5755", subject: "Chinese Porcelain (16th-17th C)", description: "Blue/white/red ceramics arranged on cream background.", verdict: "yes", notes: "Beautiful objects. Balanced composition. Classic decorative.", batch: 4, rank: 14 },
+    { file: "5760", subject: "Spectra (Light/Physics)", description: "Rainbow bands on black, emission lines.", verdict: "yes", notes: "Striking. Modern/scientific aesthetic. Rainbow gradient gorgeous.", batch: 4, rank: 10 },
+    { file: "5765", subject: "Piper (Black Watch)", description: "Scottish bagpiper in full regalia, tartan kilt, Highland backdrop.", verdict: "decent", notes: "Very British. Good if you want that vibe.", batch: 4 },
+    { file: "5770", subject: "Embryology (Chick/Frog)", description: "B&W diagrams, egg cross-sections, frog spawn.", verdict: "no", notes: "Too scientific/clinical.", batch: 4 },
+    { file: "5775", subject: "Apple & Relatives", description: "Six photos: apple, pear, quince with blossoms.", verdict: "yes", notes: "Warm, botanical. Kitchen-friendly.", batch: 4 },
+    { file: "5780", subject: "Burma (Smoking Scene)", description: "Sepia-toned photo, people in ox-cart.", verdict: "no", notes: "Documentary/ethnographic.", batch: 4 },
+    { file: "5785", subject: "Paris (Seine Banks)", description: "Two color photos, Arc de Triomphe and Latin Quarter.", verdict: "weak", notes: "Standard travel photography.", batch: 4 },
+    { file: "5790", subject: "Michelangelo's Moses", description: "B&W photo of sculpture.", verdict: "decent", notes: "B&W limits impact. Classical art interest.", batch: 4 },
+    { file: "5795", subject: "Japanese Children in Kimono", description: "Vivid color, girls in red/pink/blue kimonos on black background.", verdict: "yes", notes: "Striking colors, elegant. Strong graphic impact.", batch: 4, rank: 18 },
+    { file: "5800", subject: "Miyajima Village (Japan)", description: "Color photo, street scene with pagoda, red banners.", verdict: "decent", notes: "Pleasant but busy composition.", batch: 4 },
+    { file: "5807", subject: "Glass Flowers (Harvard)", description: "Pink rhododendron on dark leaves. Better framing than 5808.", verdict: "yes", notes: "Best version of this subject. Top pick.", batch: 4, rank: 4 },
+    { file: "5812", subject: "Czechoslovakian Festival Dress", description: "B&W, two girls in traditional embroidered costumes.", verdict: "no", notes: "Low impact due to B&W.", batch: 4 },
+    
+    // Batch 5
+    { file: "5714", subject: "University Hoods & Coats of Arms", description: "Color illustration, academic hoods and heraldic shields.", verdict: "decent", notes: "Colorful, graphic. Niche academic appeal.", batch: 5 },
+    { file: "5719", subject: "Primates", description: "Color illustration, 8 monkeys/apes on tan background (gorilla, mandrill, chimpanzee, etc.).", verdict: "yes", notes: "Warm tones. Natural history charm. Good composition.", batch: 5 },
+    { file: "5724", subject: "Italian Lakes (Lake Orta)", description: "Color photo, lake view through trees, purple/pink tones.", verdict: "decent", notes: "Romantic but trees obscure view.", batch: 5 },
+    { file: "5729", subject: "WWII Air Raid (Children in Trench)", description: "B&W photo, children watching sky from shelter.", verdict: "no", notes: "Sensitive wartime subject. B&W.", batch: 5 },
+    { file: "5734", subject: "Crocuses", description: "Color photo, pink/purple crocuses with blue forget-me-nots.", verdict: "decent", notes: "Pretty spring flowers. Soft colors.", batch: 5 },
+    { file: "5739", subject: "Crown Jewels", description: "Color illustration, British royal regalia on mauve background.", verdict: "yes", notes: "Opulent. Gold/purple/red. Striking.", batch: 5, rank: 12 },
+    { file: "5744", subject: "King Penguins", description: "Color photo, group of penguins at zoo.", verdict: "decent", notes: "Charming but zoo setting visible.", batch: 5 },
+    { file: "5749", subject: "Africa Map", description: "Color political map, post-1960 independence states.", verdict: "decent", notes: "Historical interest. Good colors.", batch: 5 },
+    { file: "5754", subject: "Switchboard Girls", description: "B&W photo, operators at telephone exchange.", verdict: "no", notes: "Documentary, B&W.", batch: 5 },
+    { file: "5759", subject: "Chinese Lanterns (Physalis)", description: "Color photo, orange lantern plant pods against pale blue sky.", verdict: "yes", notes: "Beautiful. Striking orange/blue contrast. Elegant.", batch: 5, rank: 11 },
+    { file: "5764", subject: "Oil Pipes (Kuwait)", description: "B&W photo, industrial pipeline on jetty.", verdict: "no", notes: "Industrial, B&W.", batch: 5 },
+    { file: "5769", subject: "Oasis Village Children (Algeria)", description: "B&W photo, children in patterned dresses.", verdict: "no", notes: "Documentary, B&W.", batch: 5 },
+    { file: "5774", subject: "Watusi Hunters Dance", description: "Sepia photo, African hunters in traditional dress.", verdict: "no", notes: "Ethnographic, dated framing.", batch: 5 },
+    { file: "5779", subject: "Londoners in Costume", description: "Two color photos, Chelsea Pensioners and Pearly Kings/Queens.", verdict: "decent", notes: "Very British. Red robes, button-covered suits.", batch: 5 },
+    { file: "5784", subject: "Windsor Castle", description: "Color photo, guards band marching, castle backdrop.", verdict: "decent", notes: "Quintessentially British. Red uniforms pop.", batch: 5 },
+    { file: "5789", subject: "Molluscs", description: "Color illustration, shells, octopus, snails on cream background.", verdict: "yes", notes: "Excellent. Cabinet of curiosities. Warm earth tones.", batch: 5, rank: 13 },
+    { file: "5794", subject: "Flamingos", description: "Color photo, pink flamingos on dark water, reflections.", verdict: "yes", notes: "Moody, elegant. Pink/purple tones.", batch: 5, rank: 19 },
+    { file: "5799", subject: "Egyptian Tomb Figures", description: "Color photo, two wooden servant figures with baskets on mauve background.", verdict: "yes", notes: "Striking. Ancient art. Clean composition.", batch: 5, rank: 20 },
+    { file: "5806", subject: "Seville Spring Fair", description: "Color photo, woman in traditional dress, crowded festival.", verdict: "decent", notes: "Vibrant but busy composition.", batch: 5 },
+    { file: "5811", subject: "Denmark (Young Subjects)", description: "Two color photos, Danish and Greenlandic children in traditional dress.", verdict: "decent", notes: "Colorful folk costumes. Charming.", batch: 5 }
+];
+
+let currentFilter = 'all';
+let currentBatch = 'all';
+let currentSort = 'rank';
+let searchTerm = '';
+let currentModalIndex = -1;
+let filteredData = [];
+
+function getVerdictClass(verdict) {
+    if (verdict === 'yes') return 'verdict-yes';
+    if (verdict === 'decent') return 'verdict-decent';
+    if (verdict === 'weak') return 'verdict-weak';
+    return 'verdict-no';
+}
+
+function getVerdictLabel(verdict) {
+    if (verdict === 'yes') return 'Recommended';
+    if (verdict === 'decent') return 'Decent';
+    if (verdict === 'weak') return 'Weak';
+    return 'Not Recommended';
+}
+
+function filterAndSort() {
+    filteredData = imageData.filter(item => {
+        // Filter by verdict
+        if (currentFilter !== 'all') {
+            if (currentFilter === 'yes' && item.verdict !== 'yes') return false;
+            if (currentFilter === 'decent' && item.verdict !== 'decent') return false;
+            if (currentFilter === 'no' && (item.verdict !== 'no' && item.verdict !== 'weak')) return false;
+        }
+        
+        // Filter by batch
+        if (currentBatch !== 'all' && item.batch !== parseInt(currentBatch)) return false;
+        
+        // Filter by search
+        if (searchTerm) {
+            const search = searchTerm.toLowerCase();
+            if (!item.subject.toLowerCase().includes(search) && 
+                !item.description.toLowerCase().includes(search) &&
+                !item.file.includes(search)) return false;
+        }
+        
+        return true;
+    });
+    
+    // Sort
+    if (currentSort === 'rank') {
+        filteredData.sort((a, b) => {
+            if (a.rank && b.rank) return a.rank - b.rank;
+            if (a.rank) return -1;
+            if (b.rank) return 1;
+            return parseInt(a.file) - parseInt(b.file);
+        });
+    } else if (currentSort === 'file') {
+        filteredData.sort((a, b) => parseInt(a.file) - parseInt(b.file));
+    } else if (currentSort === 'batch') {
+        filteredData.sort((a, b) => {
+            if (a.batch !== b.batch) return a.batch - b.batch;
+            return parseInt(a.file) - parseInt(b.file);
+        });
+    }
+    
+    renderGallery();
+    updateStats();
+}
+
+function renderGallery() {
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = filteredData.map((item, index) => `
+        <div class="card ${item.verdict === 'yes' ? 'recommended' : ''} ${item.rank ? 'top-pick' : ''}" 
+             onclick="openModal(${index})">
+            <span class="card-batch">Batch ${item.batch}</span>
+            ${item.rank ? `<span class="card-rank">#${item.rank}</span>` : ''}
+            <img class="card-image" src="images/IMG_${item.file}.jpg" alt="${item.subject}" loading="lazy">
+            <div class="card-content">
+                <h3 class="card-title">${item.subject}</h3>
+                <p class="card-file">IMG_${item.file}</p>
+                <span class="card-verdict ${getVerdictClass(item.verdict)}">${getVerdictLabel(item.verdict)}</span>
+            </div>
+        </div>
+    `).join('');
+}
+
+function updateStats() {
+    const stats = document.getElementById('stats');
+    const recommended = filteredData.filter(i => i.verdict === 'yes').length;
+    stats.textContent = `Showing ${filteredData.length} images (${recommended} recommended)`;
+}
+
+function openModal(index) {
+    currentModalIndex = index;
+    const item = filteredData[index];
+    
+    document.getElementById('modalImage').src = `images/IMG_${item.file}.jpg`;
+    document.getElementById('modalTitle').textContent = item.subject;
+    document.getElementById('modalFile').textContent = `IMG_${item.file}.jpg`;
+    document.getElementById('modalDescription').textContent = item.description;
+    document.getElementById('modalNotes').textContent = item.notes;
+    document.getElementById('modalBatch').textContent = `Batch ${item.batch}`;
+    
+    const verdictEl = document.getElementById('modalVerdict');
+    verdictEl.textContent = getVerdictLabel(item.verdict);
+    verdictEl.className = `modal-verdict ${getVerdictClass(item.verdict)}`;
+    
+    const rankSection = document.getElementById('modalRankSection');
+    if (item.rank) {
+        rankSection.style.display = 'block';
+        document.getElementById('modalRank').textContent = `#${item.rank} of 100`;
+    } else {
+        rankSection.style.display = 'none';
+    }
+    
+    document.getElementById('modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('modal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function navigate(direction) {
+    currentModalIndex += direction;
+    if (currentModalIndex < 0) currentModalIndex = filteredData.length - 1;
+    if (currentModalIndex >= filteredData.length) currentModalIndex = 0;
+    openModal(currentModalIndex);
+}
+
+function scrollToImage(file) {
+    closeModal();
+    currentFilter = 'all';
+    currentBatch = 'all';
+    searchTerm = '';
+    document.getElementById('batchFilter').value = 'all';
+    document.getElementById('searchBox').value = '';
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-filter="all"]').classList.add('active');
+    
+    filterAndSort();
+    
+    const index = filteredData.findIndex(i => i.file === file);
+    if (index >= 0) {
+        openModal(index);
+    }
+}
+
+function renderTopPicks() {
+    const tiers = [
+        { id: 'tier1', items: imageData.filter(i => i.rank && i.rank <= 5) },
+        { id: 'tier2', items: imageData.filter(i => i.rank && i.rank > 5 && i.rank <= 10) },
+        { id: 'tier3', items: imageData.filter(i => i.rank && i.rank > 10 && i.rank <= 15) },
+        { id: 'tier4', items: imageData.filter(i => i.rank && i.rank > 15 && i.rank <= 20) }
+    ];
+    
+    tiers.forEach(tier => {
+        const container = document.getElementById(tier.id);
+        tier.items.sort((a, b) => a.rank - b.rank);
+        container.innerHTML = tier.items.map(item => `
+            <div class="tier-item" onclick="scrollToImage('${item.file}')">
+                <span class="rank">#${item.rank}</span> ${item.subject}
+            </div>
+        `).join('');
+    });
+}
+
+// Event listeners
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        filterAndSort();
+    });
+});
+
+document.getElementById('batchFilter').addEventListener('change', (e) => {
+    currentBatch = e.target.value;
+    filterAndSort();
+});
+
+document.getElementById('sortOrder').addEventListener('change', (e) => {
+    currentSort = e.target.value;
+    filterAndSort();
+});
+
+document.getElementById('searchBox').addEventListener('input', (e) => {
+    searchTerm = e.target.value;
+    filterAndSort();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (document.getElementById('modal').classList.contains('active')) {
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+    }
+});
+
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target.id === 'modal') closeModal();
+});
+
+// Initialize
+renderTopPicks();
+filterAndSort();
+    </script>
+</body>
+</html>
