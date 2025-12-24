@@ -1268,5 +1268,55 @@
     "batch": 2,
     "pageText": "",
     "stars": 2
+  },
+  {
+    "file": "5844",
+    "subject": "Where Birds Lay Their Eggs",
+    "description": "B&W photographs of various birds with their nests and eggs.",
+    "verdict": "no",
+    "notes": "Documentary B&W photographs of birds nesting. Multiple small images in magazine layout. The colour bird eggs illustration elsewhere in the collection is far superior for wall art.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5845",
+    "subject": "Care and Treatment of the Sick",
+    "description": "B&W photographs of hospital nursing and X-ray equipment.",
+    "verdict": "no",
+    "notes": "Clinical medical documentary showing nurses training and radiography equipment. Nobody wants hospital scenes on their walls.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 1
+  },
+  {
+    "file": "5846",
+    "subject": "British Ram Breeds",
+    "description": "B&W photographs of 8 British sheep breeds in grid layout.",
+    "verdict": "no",
+    "notes": "Agricultural reference showing different British sheep breeds. B&W grid layout with no decorative appeal. Only of interest to sheep farmers.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5847",
+    "subject": "British Cattle Breeds",
+    "description": "B&W photographs of 8 British cattle breeds in grid layout.",
+    "verdict": "no",
+    "notes": "Agricultural reference showing champion cattle breeds. B&W grid layout identical to the sheep page. No decorative appeal - farming reference only.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5848",
+    "subject": "Autumn in Canada (Gatineau River)",
+    "description": "Colour photograph of Canadian autumn foliage with canoeist on river.",
+    "verdict": "yes",
+    "notes": "Beautiful autumn landscape on the Gatineau River, Quebec. Brilliant fall colours - oranges, reds, yellows reflected in calm water with lone canoeist. Classic scenic photography with strong seasonal appeal.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
   }
 ]
