@@ -1138,5 +1138,45 @@
     "batch": 2,
     "pageText": "",
     "stars": 3
+  },
+  {
+    "file": "5828",
+    "subject": "Algerian Boy (Biskra)",
+    "description": "B&W photograph of young Arab boy in traditional dress with embroidered cap.",
+    "verdict": "no",
+    "notes": "B&W photograph of young Algerian boy in traditional clothing. The colonial-era title \"Son of a Prosperous Arab\" and ethnographic framing feels dated. B&W further limits decorative appeal.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5830",
+    "subject": "Pakistani Girl with Dowry",
+    "description": "B&W photograph of Pakistani girl in traditional dress displaying jewelry dowry.",
+    "verdict": "no",
+    "notes": "B&W ethnographic photograph with colonial-era caption focusing on dowry customs and \"Mahomedan\" families. The framing around dowry practices feels dated and inappropriate for modern wall display.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5833",
+    "subject": "Lunar Landscape",
+    "description": "B&W telescopic photograph of Moon surface showing craters and maria from Mt. Wilson.",
+    "verdict": "maybe",
+    "notes": "Telescopic photograph of the lunar surface showing Archimedes crater, Mare Imbrium and Apennine mountains. Has stark scientific beauty but B&W limits decorative appeal compared to the colour Bonestell space art elsewhere in the collection.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
+  },
+  {
+    "file": "5834",
+    "subject": "Anthropoid Apes",
+    "description": "B&W photographs of four great apes - chimpanzee, gorilla, orangutan, gibbon.",
+    "verdict": "no",
+    "notes": "Scientific reference page with four B&W photographs of great apes. Educational grid layout with no decorative appeal. Not suitable for wall art.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
   }
 ]
