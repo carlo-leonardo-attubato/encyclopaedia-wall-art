@@ -1588,5 +1588,55 @@
     "batch": 2,
     "pageText": "Lovely Heads of Clustered Blooms of the Hydrangea",
     "stars": 4
+  },
+  {
+    "file": "5877",
+    "subject": "Hyacinths",
+    "description": "Colour photographs of four hyacinth varieties: Princess Irene, L'Innocence, Ostara, and Jan Bos.",
+    "verdict": "yes",
+    "notes": "Charming display of fragrant spring bulbs in pink, white, purple, and coral red. Each variety photographed in its pot against soft drapery backgrounds. Perfect for garden lovers and anyone who appreciates the simple beauty of spring flowers.",
+    "batch": 2,
+    "pageText": "Hyacinth: Favourite of House and Garden",
+    "stars": 4
+  },
+  {
+    "file": "5878",
+    "subject": "Dartmoor Landscape",
+    "description": "Colour photograph of Dartmoor moorland showing purple heather, green grass, and russet bracken.",
+    "verdict": "yes",
+    "notes": "The quintessential English moorland - a patchwork of purple heather, emerald grass, and russet bracken under moody skies. The winding road adds depth and invites the viewer into this wild Devon landscape. Excellent for nature lovers.",
+    "batch": 2,
+    "pageText": "Colours of Nature's Carpet Merge in Wondrous Harmony on Dartmoor",
+    "stars": 4
+  },
+  {
+    "file": "5879",
+    "subject": "Empress Theodora Mosaic",
+    "description": "Colour photograph of Byzantine mosaic showing Empress Theodora and attendants from San Vitale, Ravenna.",
+    "verdict": "yes",
+    "notes": "One of the greatest masterpieces of Byzantine art - Empress Theodora in resplendent court dress with her entourage. The rich colours, gold backgrounds, and elaborate details of this 6th-century mosaic are stunning. Museum-quality art historical piece.",
+    "batch": 2,
+    "pageText": "Byzantine Artistry Expressed in an Elaborate Mosaic at Ravenna",
+    "stars": 5
+  },
+  {
+    "file": "5880",
+    "subject": "African Water-Hole Diorama",
+    "description": "Colour photograph of museum diorama showing African wildlife at Ethiopian water-hole.",
+    "verdict": "maybe",
+    "notes": "Well-executed museum diorama from Chicago Natural History Museum featuring rhinos, zebras, and other African wildlife. While visually appealing, the diorama context limits its appeal as genuine wildlife art. Better suited for educational settings.",
+    "batch": 2,
+    "pageText": "Afternoon Scene at an African Water-Hole",
+    "stars": 3
+  },
+  {
+    "file": "5881",
+    "subject": "Iris and Moth",
+    "description": "Colour plate showing pink iris flower alongside emperor moth and cocoon.",
+    "verdict": "yes",
+    "notes": "Exquisite pairing of botanical and entomological beauty. The delicate pink iris and magnificent emperor moth create a harmonious composition that celebrates nature's artistry. Elegant, refined, and perfect for sophisticated spaces.",
+    "batch": 2,
+    "pageText": "Rivals in Beauty - The Iris and the Moth",
+    "stars": 5
   }
 ]
