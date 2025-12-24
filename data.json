@@ -1838,5 +1838,55 @@
     "batch": 2,
     "pageText": "Oban Bay and the Mountains of Morven",
     "stars": 4
+  },
+  {
+    "file": "5902",
+    "subject": "Scottish Lochs and Rivers",
+    "description": "Colour photographs of Poolewe at Loch Ewe and the River Leny rapids near Callander in the Trossachs.",
+    "verdict": "yes",
+    "notes": "Contrasting Scottish water scenes - the tranquil blue of Loch Ewe versus the tumbling white water of the River Leny. Both showcase Scotland's dramatic relationship with water. Beautiful for nature lovers and those drawn to Scottish landscapes.",
+    "batch": 2,
+    "pageText": "Still Blue Water and Raging Torrent",
+    "stars": 4
+  },
+  {
+    "file": "5903",
+    "subject": "Glen Affric and Glen Grudie",
+    "description": "Colour photographs of Glen Affric in Inverness-shire and Glen Grudie with Ben Slioch.",
+    "verdict": "yes",
+    "notes": "Two of Scotland's most beautiful glens. Glen Affric is considered the finest in the UK, with its perfect blend of water, forest, and mountain. The autumn colours and misty mountains create an almost mystical atmosphere. Superb Highland scenery.",
+    "batch": 2,
+    "pageText": "Beauty and Grandeur of Glen and Mountain",
+    "stars": 4
+  },
+  {
+    "file": "5904",
+    "subject": "Highland Games and Cattle",
+    "description": "Colour photographs of Braemar Highland Gathering and shaggy Highland cattle.",
+    "verdict": "yes",
+    "notes": "Quintessential Scottish culture - the pageantry of the Highland Games at Braemar and the iconic shaggy Highland cattle. Both images capture the spirit of Scotland's traditions. Great for those who love Scottish heritage and rural life.",
+    "batch": 2,
+    "pageText": "Highland Games and Highland Cattle",
+    "stars": 4
+  },
+  {
+    "file": "5905",
+    "subject": "Girl Guide Badges",
+    "description": "Colour chart showing comprehensive collection of Girl Guide proficiency badges.",
+    "verdict": "no",
+    "notes": "Reference chart of Girl Guide badges showing various skills from Artist to Knitter. While historically interesting and nostalgic for former Guides, this is educational reference material rather than decorative art. Limited wall art appeal.",
+    "batch": 2,
+    "pageText": "Badges to be Earned by Girl Guides",
+    "stars": 2
+  },
+  {
+    "file": "5906",
+    "subject": "Air Rangers and Sea Rangers",
+    "description": "B&W photographs of Girl Guide Air Rangers with Aldis lamps and Sea Rangers on deck.",
+    "verdict": "no",
+    "notes": "Documentary photographs of specialized Girl Guide sections - Air Rangers learning signaling and Sea Rangers practicing navigation. Historically interesting but the B&W format and institutional subject matter limit decorative appeal.",
+    "batch": 2,
+    "pageText": "Guides: Air Rangers and Sea Rangers",
+    "stars": 2
   }
 ]
