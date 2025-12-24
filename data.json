@@ -1638,5 +1638,55 @@
     "batch": 2,
     "pageText": "Rivals in Beauty - The Iris and the Moth",
     "stars": 5
+  },
+  {
+    "file": "5882",
+    "subject": "Scottish Piper at Glencoe",
+    "description": "Colour photograph of Highland piper in full dress at Glencoe with dramatic mountain backdrop.",
+    "verdict": "yes",
+    "notes": "Iconic Scottish imagery - a lone piper in tartan at the entrance to Glencoe, the \"glen of weeping.\" The dramatic mountain scenery adds gravitas to this symbol of Scottish culture and history. Perfect for those who love Scotland.",
+    "batch": 2,
+    "pageText": "The Colour of Bonnie Scotland",
+    "stars": 4
+  },
+  {
+    "file": "5883",
+    "subject": "Map of Scotland",
+    "description": "Reference map showing towns and counties of Scotland with Highlands and islands.",
+    "verdict": "no",
+    "notes": "Functional reference map of Scotland showing administrative boundaries. While useful for geography, the simple cartographic style lacks the decorative appeal needed for wall art. Better suited for educational contexts.",
+    "batch": 2,
+    "pageText": "Towns and Counties of Scotland",
+    "stars": 2
+  },
+  {
+    "file": "5884",
+    "subject": "Kenilworth Castle",
+    "description": "Colour photograph of medieval castle ruins seen through bare winter trees.",
+    "verdict": "yes",
+    "notes": "Atmospheric view of this historic fortress through bare branches, creating a romantic, melancholic scene. The castle's rich history - Simon de Montfort, Robert Dudley, Elizabeth I - adds depth. Classic English heritage imagery.",
+    "batch": 2,
+    "pageText": "Kenilworth Castle, Fortress of the Past",
+    "stars": 4
+  },
+  {
+    "file": "5885",
+    "subject": "Ballet Performances",
+    "description": "Colour photographs comparing classical Swan Lake and modern Mardi Gras ballets.",
+    "verdict": "yes",
+    "notes": "Beautiful contrast between classical and modern ballet. The ethereal white tutus of Swan Lake against the vibrant costumes of Mardi Gras showcase the art form's range. Elegant choice for performing arts enthusiasts.",
+    "batch": 2,
+    "pageText": "Ballet, Classical and Modern",
+    "stars": 4
+  },
+  {
+    "file": "5886",
+    "subject": "Winter Constellations",
+    "description": "Star chart showing winter sky constellations with traditional figures outlined.",
+    "verdict": "yes",
+    "notes": "Charming astronomical chart with constellation figures drawn in classical style. Orion, the Great Dog, the Twins, and other winter star groups on a black field. Educational and decorative - perfect for astronomy enthusiasts or studies.",
+    "batch": 2,
+    "pageText": "Star-Groups You Can See in the Winter Sky",
+    "stars": 4
   }
 ]
