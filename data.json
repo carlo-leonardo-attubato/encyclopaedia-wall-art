@@ -1228,5 +1228,45 @@
     "batch": 2,
     "pageText": "",
     "stars": 4
+  },
+  {
+    "file": "5840",
+    "subject": "Nine Hundred Years of Women's Dress",
+    "description": "Colour illustration showing women's fashion evolution from 1000 AD to 1890.",
+    "verdict": "yes",
+    "notes": "Charming watercolour illustration of women's fashion through the ages - medieval, Tudor, Stuart, Georgian, Regency, Victorian. Clean grid layout on cream background. Delightful fashion history piece with genuine decorative appeal.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
+  },
+  {
+    "file": "5841",
+    "subject": "Spider Anatomy (Microscope)",
+    "description": "B&W scientific diagrams of spider anatomy under microscope.",
+    "verdict": "no",
+    "notes": "Clinical scientific page showing magnified spider parts - poison fangs, spinnerets, face, etc. Too creepy and technical for wall art. Nobody wants a giant spider face diagram on their wall.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 1
+  },
+  {
+    "file": "5842",
+    "subject": "Giant Spider with Dead Humming Bird",
+    "description": "Colour photograph of tarantula with captured hummingbird prey.",
+    "verdict": "no",
+    "notes": "Nature documentary showing a bird-eating spider with its prey. Gruesome subject matter - absolutely not suitable for wall display unless you want to disturb your guests.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 1
+  },
+  {
+    "file": "5843",
+    "subject": "Flowers (Microscope)",
+    "description": "B&W microscopic photographs of flower parts - pollen, stigmas, petals.",
+    "verdict": "no",
+    "notes": "Scientific botanical photography showing magnified flower structures. B&W and clinical presentation lacks the decorative appeal of the colour botanical plates. Reference material only.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
   }
 ]
