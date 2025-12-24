@@ -1438,5 +1438,55 @@
     "batch": 2,
     "pageText": "",
     "stars": 4
+  },
+  {
+    "file": "5862",
+    "subject": "Hyde Park Fireworks 1919",
+    "description": "Colour photograph of peace celebration firework display in Hyde Park on July 19, 1919.",
+    "verdict": "yes",
+    "notes": "Absolutely stunning - brilliant white fountain bursts, pink and gold fireworks reflected beautifully in the Serpentine. The most extensive firework spectacle of its time. Historical significance combined with spectacular visual impact makes this museum-quality wall art.",
+    "batch": 2,
+    "pageText": "Peace Celebrated by a Firework Display in Hyde Park on July 19, 1919",
+    "stars": 5
+  },
+  {
+    "file": "5863",
+    "subject": "Nightingale at Nest",
+    "description": "Sepia photograph of hen nightingale with her brood at nest of dead leaves and grass.",
+    "verdict": "maybe",
+    "notes": "Charming wildlife photograph showing the nightingale at her ground-level nest. The sepia tones give it vintage appeal, but its documentary nature limits decorative potential. Would suit a naturalist or birdwatcher.",
+    "batch": 2,
+    "pageText": "Hen Nightingale with her Hungry Brood",
+    "stars": 3
+  },
+  {
+    "file": "5864",
+    "subject": "Swans with Cygnets",
+    "description": "Sepia photograph of swans with their fluffy cygnets near nest of reeds and rushes.",
+    "verdict": "maybe",
+    "notes": "Sweet scene of swan family life - adult swans tending to their fluffy babies by the riverbank. The sepia tones add period charm but the composition is more documentary than artistic. Nice for wildlife enthusiasts.",
+    "batch": 2,
+    "pageText": "Homes and Haunts of British Birds",
+    "stars": 3
+  },
+  {
+    "file": "5865",
+    "subject": "Anemones",
+    "description": "Colour photographs of Anemone de Caen (red and purple-blue) and Anemone Blanda (delicate blue flowers).",
+    "verdict": "yes",
+    "notes": "Exquisite botanical photography. The top image is exceptional - vivid red and purple anemones in a decorative vase against pure black, creating dramatic contrast. The delicate Anemone Blanda below adds variety. Perfect for botanical art lovers.",
+    "batch": 2,
+    "pageText": "Daughters of the Wind",
+    "stars": 5
+  },
+  {
+    "file": "5866",
+    "subject": "Hampton Court Palace Gardens",
+    "description": "Colour photograph of formal gardens at Hampton Court Palace with vibrant flower beds.",
+    "verdict": "yes",
+    "notes": "Magnificent combination of English heritage and horticultural beauty. Geometric flower beds ablaze with colour against the mellow Tudor brickwork. Blue sky with white clouds completes the idyllic scene. Excellent for Anglophiles and garden lovers.",
+    "batch": 2,
+    "pageText": "Blaze of Colour Against the Mellow Brickwork of Hampton Court Palace",
+    "stars": 5
   }
 ]
