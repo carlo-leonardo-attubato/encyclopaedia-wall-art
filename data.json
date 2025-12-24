@@ -1538,5 +1538,55 @@
     "batch": 2,
     "pageText": "The Union Jack on the World's Summit",
     "stars": 4
+  },
+  {
+    "file": "5872",
+    "subject": "Everest Expedition Team",
+    "description": "Colour photographs of 1953 British Everest expedition members with equipment and crossing crevasse.",
+    "verdict": "yes",
+    "notes": "More excellent imagery from the historic 1953 expedition. Edmund Hillary with oxygen gear, and dramatic shot of climber crossing a crevasse by ladder. Documents human achievement against the most challenging terrain on Earth.",
+    "batch": 2,
+    "pageText": "Successful British Team on Everest",
+    "stars": 4
+  },
+  {
+    "file": "5873",
+    "subject": "Oxford University Aerial",
+    "description": "Colour aerial photograph of Oxford University showing Christ Church, Radcliffe Camera, and historic colleges.",
+    "verdict": "yes",
+    "notes": "Magnificent bird's-eye view of one of the world's great university cities. The golden limestone of ancient colleges, the iconic Radcliffe Camera dome, green quadrangles - perfect for academics, Anglophiles, or anyone who loves historic architecture.",
+    "batch": 2,
+    "pageText": "The Heart of the University of Oxford",
+    "stars": 4
+  },
+  {
+    "file": "5874",
+    "subject": "Autumn Beech Forest",
+    "description": "Colour photograph of beech trees in golden autumn foliage with rustic wooden footbridge.",
+    "verdict": "yes",
+    "notes": "Absolutely breathtaking autumn scene. A rustic wooden bridge leads through a cathedral of golden beeches, with fallen leaves carpeting the forest floor. The warm amber tones create a magical, peaceful atmosphere. Museum-quality landscape art.",
+    "batch": 2,
+    "pageText": "Beeches Draped in the Gold of Autumn",
+    "stars": 5
+  },
+  {
+    "file": "5875",
+    "subject": "State Opening of Parliament",
+    "description": "Colour photograph of Queen Elizabeth II opening Parliament in House of Lords, October 1958.",
+    "verdict": "yes",
+    "notes": "Historic ceremonial photograph - the first televised State Opening. Queen Elizabeth II in the Imperial State Crown surrounded by Lords in scarlet robes. A magnificent display of British constitutional pageantry and tradition.",
+    "batch": 2,
+    "pageText": "The State Opening of Parliament",
+    "stars": 4
+  },
+  {
+    "file": "5876",
+    "subject": "Hydrangeas",
+    "description": "Colour photograph of pink and cream hydrangea blooms with rich green foliage.",
+    "verdict": "yes",
+    "notes": "Lush botanical photography featuring clusters of pink and cream hydrangeas. The rich colours and abundant blooms make this a cheerful, garden-fresh piece suitable for any room that needs a touch of floral elegance.",
+    "batch": 2,
+    "pageText": "Lovely Heads of Clustered Blooms of the Hydrangea",
+    "stars": 4
   }
 ]
