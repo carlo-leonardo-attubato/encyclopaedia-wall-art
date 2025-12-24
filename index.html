@@ -324,8 +324,8 @@
             <span class="chip active" data-stars="5">5★</span>
             <span class="chip active" data-stars="4">4★</span>
             <span class="chip active" data-stars="3">3★</span>
-            <span class="chip" data-stars="2">2★</span>
-            <span class="chip" data-stars="1">1★</span>
+            <span class="chip active" data-stars="2">2★</span>
+            <span class="chip active" data-stars="1">1★</span>
         </div>
         <div class="filter-group">
             <span class="chip colour active" data-type="colour">Colour</span>
@@ -390,12 +390,12 @@ let currentModalIndex = -1;
 let filteredData = [];
 
 // Filter states (multi-select)
-let activeStars = new Set([5, 4, 3]);
+let activeStars = new Set([5, 4, 3, 2, 1]);
 let activeTypes = new Set(['colour', 'bw']);
 
 function isBlackAndWhite(item) {
     const desc = (item.description || '').toLowerCase();
-    return desc.includes('b&w') || desc.includes('b&w') || desc.includes('sepia');
+    return desc.includes('b&w') || desc.includes('sepia') || desc.includes('black and white');
 }
 
 function getVerdictClass(verdict) {
