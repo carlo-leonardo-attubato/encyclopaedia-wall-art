@@ -1688,5 +1688,55 @@
     "batch": 2,
     "pageText": "Star-Groups You Can See in the Winter Sky",
     "stars": 4
+  },
+  {
+    "file": "5887",
+    "subject": "Vintage Advertisements",
+    "description": "B&W plate showing three generations of advertising including Vi-Cocoa, milk delivery, and Bovril.",
+    "verdict": "maybe",
+    "notes": "Nostalgic collection of Victorian/Edwardian advertisements. The quaint domestic scenes and period typography have retro charm for those interested in advertising history or vintage aesthetics, but limited general appeal.",
+    "batch": 2,
+    "pageText": "Three Generations of Advertising",
+    "stars": 3
+  },
+  {
+    "file": "5888",
+    "subject": "Angel Fish and Lumpsucker",
+    "description": "Sepia photographs contrasting graceful angel fish with ugly lumpsucker guarding eggs.",
+    "verdict": "no",
+    "notes": "Documentary marine photography comparing beautiful and ugly fish. The contrast is educational but neither image has strong decorative appeal. The sepia tones and aquarium setting limit aesthetic value.",
+    "batch": 2,
+    "pageText": "Beauty and Ugliness in the World of Water",
+    "stars": 2
+  },
+  {
+    "file": "5889",
+    "subject": "Fishing Industry",
+    "description": "Sepia photographs of Yarmouth fishing industry showing thousands of barrels of herrings.",
+    "verdict": "no",
+    "notes": "Industrial documentary photography of the herring trade. The repetitive patterns of barrels have some graphic interest, but the subject matter is too commercial and utilitarian for decorative purposes.",
+    "batch": 2,
+    "pageText": "Slump and Boom in the Fishing Industry",
+    "stars": 2
+  },
+  {
+    "file": "5890",
+    "subject": "Women's Careers",
+    "description": "B&W photographs showing women in dentistry, confectionery, and banking careers.",
+    "verdict": "no",
+    "notes": "Documentary images of mid-century women's employment. Historically interesting as social documentation but the office/workplace settings lack decorative appeal. Better suited for historical archives.",
+    "batch": 2,
+    "pageText": "Careers with Widely Differing Appeals",
+    "stars": 2
+  },
+  {
+    "file": "5891",
+    "subject": "Jet Aircraft",
+    "description": "B&W photographs of experimental jets including Fairey Delta, Avro Vulcan, and Flying Bedstead.",
+    "verdict": "maybe",
+    "notes": "Fascinating Cold War aviation technology - delta wings, supersonic fighters, and vertical take-off experiments. Appeals strongly to aviation enthusiasts and those interested in mid-century technology, but limited general decorative appeal.",
+    "batch": 2,
+    "pageText": "Strange Shapes of Jet Aircraft",
+    "stars": 3
   }
 ]
