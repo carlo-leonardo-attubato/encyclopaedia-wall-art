@@ -1398,5 +1398,45 @@
     "batch": 2,
     "pageText": "",
     "stars": 4
+  },
+  {
+    "file": "5857",
+    "subject": "Champion Athletes",
+    "description": "B&W photographs of track and field athletes in action.",
+    "verdict": "no",
+    "notes": "B&W sports documentary showing various track and field events. Dated mid-century athletic photography with no decorative appeal for modern walls.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5858",
+    "subject": "Merchant Navy",
+    "description": "B&W photographs of merchant navy ships and training.",
+    "verdict": "no",
+    "notes": "B&W maritime documentary showing merchant navy vessels and cadet training. Industrial shipping photography with no decorative appeal.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5859",
+    "subject": "Cordoba Mosque (Mezquita)",
+    "description": "B&W photographs of the famous Moorish mosque with horseshoe arches.",
+    "verdict": "maybe",
+    "notes": "Iconic Mezquita of Cordoba with its famous forest of horseshoe arches. B&W photography misses the distinctive red and white stripes that make this building so visually striking. Architectural interest but colour would be much better.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
+  },
+  {
+    "file": "5860",
+    "subject": "Decorative Rugs",
+    "description": "Colour photographs of Turcoman rug and French floral carpet.",
+    "verdict": "yes",
+    "notes": "Beautiful textile art - a striking red Turcoman rug with geometric patterns alongside an opulent French floral carpet on deep blue background. Strong decorative appeal for those who appreciate textile arts and craftsmanship.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
   }
 ]
