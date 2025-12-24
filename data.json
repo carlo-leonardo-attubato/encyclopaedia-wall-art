@@ -1088,5 +1088,55 @@
     "batch": 6,
     "pageText": "STONE 'PAGES' THAT TELL THE EARTH'S STORY\n\nHere the story of the earth lies written, so to speak, on the upturned pages of a bent-back book (an anticline is called Airthrey, but it comes from Sutherlandshire—one of the oldest rocks on the British Isles). A harder layer of rock, bent up by earth movement into the form shown, resists weathering better than surrounding rocks; sometimes they are worn away first at the centre (9, 11), and eventually the sides crumble to leave isolated stumps. 1. Ordovician. 2. A harder mass of rock. 3. Devonian. 4. Carboniferous. 5. Permian. 6. Triassic. 7. Jurassic. 8. Cretaceous. 9. Tertiary. 10. Pleistocene. 11, 12. Alluvium. The period which is called the Glacial or Ice Age extended from 1,000,000 years ago to about 20,000 years. This ended somewhere of glaciers, gradients and hills.",
     "stars": 5
+  },
+  {
+    "file": "5819",
+    "subject": "Hokusai Waterfall",
+    "description": "Colour reproduction of Hokusai woodblock print showing waterfall with figures on wooden bridge.",
+    "verdict": "yes",
+    "notes": "Hokusai woodblock print from the famous waterfalls series. Classic ukiyo-e style with stylized blue water cascading over rocks, tiny figures crossing a wooden bridge. One of the masterworks of Japanese art - highly frameable and decorative.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 5
+  },
+  {
+    "file": "5820",
+    "subject": "Japanese Beauty (Hosoda Eishi)",
+    "description": "18th century ukiyo-e print of Japanese woman in black kimono by Hosoda Eishi.",
+    "verdict": "yes",
+    "notes": "Elegant bijin-ga (beautiful woman) print by master Hosoda Eishi (1756-1829). Subtle colour combinations, refined composition. Classical Japanese art at its finest - highly decorative and frameable.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 5
+  },
+  {
+    "file": "5824",
+    "subject": "Bridge of Sighs, Venice",
+    "description": "Colour photograph of the famous Bridge of Sighs with gondola beneath.",
+    "verdict": "maybe",
+    "notes": "Classic Venice view - the famous white limestone Bridge of Sighs framed through an arch with gondola passing beneath. Pleasant travel photography but a fairly standard postcard view. Appeals to Venice lovers but not exceptional.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
+  },
+  {
+    "file": "5825",
+    "subject": "Doge's Palace, Venice",
+    "description": "Colour photograph of the Doge's Palace from the waterfront with column of St. Theodore.",
+    "verdict": "maybe",
+    "notes": "Famous Gothic Doge's Palace with distinctive pink and white diamond-patterned facade and arcades. Standard Venice travel photography - pleasant but postcard-like. Appeals to Venice enthusiasts.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
+  },
+  {
+    "file": "5826",
+    "subject": "Santa Maria della Salute, Venice",
+    "description": "Colour photograph of the baroque church from the Grand Canal with gondola posts.",
+    "verdict": "maybe",
+    "notes": "Famous 17th century baroque church at the entrance to the Grand Canal. Distinctive white dome and scroll buttresses. Standard Venice travel photography - iconic landmark but postcard-like composition.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
   }
 ]
