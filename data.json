@@ -1488,5 +1488,55 @@
     "batch": 2,
     "pageText": "Blaze of Colour Against the Mellow Brickwork of Hampton Court Palace",
     "stars": 5
+  },
+  {
+    "file": "5867",
+    "subject": "Rainbows and Solar Halo",
+    "description": "Colour illustrations of atmospheric phenomena - double rainbow and solar halo caused by ice crystals.",
+    "verdict": "yes",
+    "notes": "Dreamy, romantic depictions of atmospheric wonders. Soft pastel colours create a peaceful, contemplative mood. The double rainbow and solar halo make for gentle, calming wall art suitable for relaxation spaces.",
+    "batch": 2,
+    "pageText": "Beautiful Rainbows and a Halo Round the Sun",
+    "stars": 4
+  },
+  {
+    "file": "5868",
+    "subject": "Salvador Volcano",
+    "description": "B&W photograph of Central American volcano that emerged from a cornfield in 1770.",
+    "verdict": "maybe",
+    "notes": "Dramatic geological imagery showing the \"Lighthouse of the Pacific\" with its smoking crater. The B&W format emphasizes the stark volcanic landscape but limits decorative versatility. Appeals to geology enthusiasts.",
+    "batch": 2,
+    "pageText": "Cornfield to Volcano in Under 200 Years",
+    "stars": 3
+  },
+  {
+    "file": "5869",
+    "subject": "Jaguars",
+    "description": "B&W photographs showing baby jaguar and adult jaguar yawning to display teeth.",
+    "verdict": "no",
+    "notes": "Documentary zoo photography of jaguars. While the animals are impressive, the B&W format and captive setting reduce aesthetic appeal. The \"ferocious yawn\" shot is interesting but not particularly decorative.",
+    "batch": 2,
+    "pageText": "Baby Jaguar / Ferocious Yawn",
+    "stars": 2
+  },
+  {
+    "file": "5870",
+    "subject": "London Horse Guards",
+    "description": "Colour photograph of Life Guards trooper in ceremonial dress on black horse at Whitehall.",
+    "verdict": "yes",
+    "notes": "Quintessential British pageantry - the scarlet tunic, white plumed helmet, gleaming black horse against historic Whitehall architecture. Perfect for Anglophiles or anyone who loves British tradition and ceremony.",
+    "batch": 2,
+    "pageText": "London: Mounted Sentry at the Horse Guards",
+    "stars": 4
+  },
+  {
+    "file": "5871",
+    "subject": "Everest Summit 1953",
+    "description": "Colour photographs of 1953 Everest expedition - Camp III and Tenzing on summit with flags.",
+    "verdict": "yes",
+    "notes": "Historic imagery from one of humanity's greatest achievements. Tenzing Norgay holding flags on the world's highest point, with Camp III in the brilliant white Western Cwm. Inspiring for adventurers and history buffs alike.",
+    "batch": 2,
+    "pageText": "The Union Jack on the World's Summit",
+    "stars": 4
   }
 ]
