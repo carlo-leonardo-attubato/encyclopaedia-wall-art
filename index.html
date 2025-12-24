@@ -195,20 +195,14 @@
         .verdict-weak { background: #6a5a4a; color: #ccc; }
         .verdict-no { background: #4a3a3a; color: #aaa; }
 
-        .rank-badge {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: #d4af37;
-            color: #1a1a1a;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: bold;
+        .stars {
+            color: #d4af37;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .stars-muted {
+            color: #444;
         }
 
         .card { position: relative; }
@@ -315,19 +309,6 @@
         .nav-prev { left: 10px; }
         .nav-next { right: 10px; }
 
-        .modal-rank-badge {
-            background: linear-gradient(135deg, #d4af37, #b8962e);
-            color: #1a1a1a;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
         @media (max-width: 900px) {
             .modal-content {
                 flex-direction: column;
@@ -377,7 +358,7 @@
         </div>
         <div class="filter-group">
             <select id="sortOrder">
-                <option value="rank">Sort by Rank</option>
+                <option value="stars">Sort by Stars</option>
                 <option value="file">Sort by File #</option>
             </select>
         </div>
@@ -420,9 +401,9 @@
                     <p id="modalPageText" style="font-size: 0.85rem; line-height: 1.5; white-space: pre-wrap;"></p>
                 </div>
 
-                <div class="modal-section" id="modalRankSection" style="display:none;">
-                    <h3>Overall Ranking</h3>
-                    <div class="modal-rank-badge" id="modalRank"></div>
+                <div class="modal-section">
+                    <h3>Rating</h3>
+                    <div class="stars" id="modalStars" style="font-size: 1.2rem;"></div>
                 </div>
             </div>
         </div>
@@ -430,7 +411,7 @@
 
     <script>
 let imageData = [];
-let currentSort = 'rank';
+let currentSort = 'stars';
 let searchTerm = '';
 let currentModalIndex = -1;
 let filteredData = [];
@@ -490,10 +471,8 @@ function filterAndSort() {
 
     // Sort
     filteredData.sort((a, b) => {
-        if (currentSort === 'rank') {
-            if (a.rank && b.rank) return a.rank - b.rank;
-            if (a.rank) return -1;
-            if (b.rank) return 1;
+        if (currentSort === 'stars') {
+            if (a.stars !== b.stars) return b.stars - a.stars;
             return parseInt(a.file) - parseInt(b.file);
         }
         return parseInt(a.file) - parseInt(b.file);
@@ -503,17 +482,19 @@ function filterAndSort() {
     updateStats();
 }
 
+function getStars(n) {
+    return '★'.repeat(n) + '<span class="stars-muted">' + '★'.repeat(5-n) + '</span>';
+}
+
 function renderGallery() {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = filteredData.map((item, index) => `
-        <div class="card ${item.verdict === 'yes' ? 'recommended' : ''} ${item.rank && item.rank <= 5 ? 'top-pick' : ''}"
+        <div class="card ${item.stars >= 4 ? 'recommended' : ''} ${item.stars === 5 ? 'top-pick' : ''}"
              onclick="openModal(${index})">
-            ${item.rank ? `<div class="rank-badge">${item.rank}</div>` : ''}
             <img class="card-image" src="images/IMG_${item.file}.jpg" alt="${item.subject}" loading="lazy">
             <div class="card-content">
                 <div class="card-title">${item.subject}</div>
-                <div class="card-file">#${item.file}</div>
-                <span class="verdict-badge ${getVerdictClass(item.verdict)}">${getVerdictLabel(item.verdict)}</span>
+                <div class="stars">${getStars(item.stars)}</div>
             </div>
         </div>
     `).join('');
@@ -547,13 +528,7 @@ function openModal(index) {
         pageTextSection.style.display = 'none';
     }
 
-    const rankSection = document.getElementById('modalRankSection');
-    if (item.rank) {
-        rankSection.style.display = 'block';
-        document.getElementById('modalRank').textContent = `#${item.rank}`;
-    } else {
-        rankSection.style.display = 'none';
-    }
+    document.getElementById('modalStars').innerHTML = getStars(item.stars);
 
     document.getElementById('modal').classList.add('active');
     document.body.style.overflow = 'hidden';
