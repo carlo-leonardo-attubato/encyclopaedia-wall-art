@@ -1318,5 +1318,45 @@
     "batch": 2,
     "pageText": "",
     "stars": 4
+  },
+  {
+    "file": "5849",
+    "subject": "Cave Drawings (Prehistoric Art)",
+    "description": "Colour reproductions of prehistoric Spanish cave paintings showing hunting and daily life.",
+    "verdict": "yes",
+    "notes": "Prehistoric cave art reproductions from Spain - hunting scenes, deer, archers, ceremonial dancers. Warm ochre and red tones have genuine visual appeal. The primitive art has striking simplicity that works well as wall decoration.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
+  },
+  {
+    "file": "5850",
+    "subject": "The Blue Grotto, Capri",
+    "description": "Colour illustration of the famous Blue Grotto sea cave in Capri.",
+    "verdict": "yes",
+    "notes": "Atmospheric illustration of the famous Blue Grotto of Capri. The ethereal blue light effect is beautifully captured with small boats floating in the illuminated cave. Dreamlike quality with striking blue tones.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
+  },
+  {
+    "file": "5851",
+    "subject": "Babylon Ruins",
+    "description": "B&W photograph of archaeological ruins of ancient Babylon.",
+    "verdict": "no",
+    "notes": "Archaeological documentation of Babylonian ruins. B&W photograph of crumbling structures with extensive text. Historical interest only - no decorative appeal.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5852",
+    "subject": "Snakes (Natural History)",
+    "description": "Colour illustration of 11 snake species - harmless, venomous and constrictors.",
+    "verdict": "maybe",
+    "notes": "Natural history illustration of snakes with good detail and colours. Well-executed plate but snake phobia will significantly limit appeal. Not for everyone but reptile enthusiasts may appreciate it.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
   }
 ]
