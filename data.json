@@ -1178,5 +1178,55 @@
     "batch": 2,
     "pageText": "",
     "stars": 2
+  },
+  {
+    "file": "5835",
+    "subject": "Bishop Rock Lighthouse",
+    "description": "Colour photograph of lighthouse in rough Atlantic seas with lifeboat rescue.",
+    "verdict": "yes",
+    "notes": "Dramatic maritime photograph of Bishop Rock Lighthouse standing alone in churning turquoise-green Atlantic waves. A lifeboat battles the seas below. Strong composition and good colours. Appeals to nautical and lighthouse enthusiasts.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
+  },
+  {
+    "file": "5836",
+    "subject": "The Farmer's Year",
+    "description": "Sepia photograph of horse-drawn ploughing creating furrows in field.",
+    "verdict": "no",
+    "notes": "Documentary agricultural photograph showing horse-drawn ploughing. The curved furrow lines have mild graphic appeal but overall too mundane for wall art. Sepia tones add nothing decorative.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5837",
+    "subject": "Useful Knots",
+    "description": "B&W instructional diagrams showing how to tie various knots.",
+    "verdict": "no",
+    "notes": "Technical reference page with B&W diagrams showing knot-tying instructions. Purely educational with no decorative appeal. Belongs in a scout handbook, not on a wall.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5838",
+    "subject": "Bavarian Painted Houses (Mittenwald)",
+    "description": "Colour photograph of traditional Bavarian buildings with Lüftlmalerei mural paintings.",
+    "verdict": "maybe",
+    "notes": "Traditional Bavarian houses with decorative Lüftlmalerei facade paintings in the alpine village of Mittenwald. Soft pastel colours and charming folk architecture. Pleasant travel photography but not exceptional.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
+  },
+  {
+    "file": "5839",
+    "subject": "Hats, Bonnets and Caps of Many Lands",
+    "description": "Colour illustration showing 56 types of headwear from different cultures and eras.",
+    "verdict": "yes",
+    "notes": "Charming watercolour illustration of headwear from around the world and throughout history. Soft pastel palette with whimsical appeal. Educational but genuinely decorative - would suit a hallway or study.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
   }
 ]
