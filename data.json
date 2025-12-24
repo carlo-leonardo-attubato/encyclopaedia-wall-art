@@ -1738,5 +1738,55 @@
     "batch": 2,
     "pageText": "Strange Shapes of Jet Aircraft",
     "stars": 3
+  },
+  {
+    "file": "5892",
+    "subject": "Early Space Photography",
+    "description": "B&W photograph from rocket camera 100 miles above Earth showing Arizona and Baja California coastline.",
+    "verdict": "maybe",
+    "notes": "Historic early space photography showing Earth from above. The grainy B&W image captures the dawn of the space age. Scientifically significant but the poor image quality limits its decorative appeal. Appeals to space/aviation history enthusiasts.",
+    "batch": 2,
+    "pageText": "An Outside View of the Earth",
+    "stars": 3
+  },
+  {
+    "file": "5893",
+    "subject": "Egyptian Portrait Sculpture",
+    "description": "Sepia photographs of ancient Egyptian statues including Prince Ra-hotep, Nefert, and Ka-nefer.",
+    "verdict": "yes",
+    "notes": "Magnificent examples of ancient Egyptian portrait sculpture from the Cairo Museum. The lifelike quality of these Old Kingdom statues - particularly the famous Ra-hotep and Nefert pair - represents the pinnacle of Egyptian artistry. Museum-quality art history.",
+    "batch": 2,
+    "pageText": "Early Triumphs of Egyptian Portrait Sculpture",
+    "stars": 4
+  },
+  {
+    "file": "5894",
+    "subject": "Luxor Temple Columns",
+    "description": "Sepia photograph of massive colonnade at Luxor Temple built by Ramesses II with pharaoh statues.",
+    "verdict": "yes",
+    "notes": "Awe-inspiring view of the Luxor colonnade with its massive papyrus columns and colossal pharaoh statues. The scale and grandeur of Ramesses II's construction is palpable. Excellent for lovers of ancient history and monumental architecture.",
+    "batch": 2,
+    "pageText": "Graceful Columns in a Temple of Ancient Thebes",
+    "stars": 4
+  },
+  {
+    "file": "5895",
+    "subject": "Abu Simbel Colossi",
+    "description": "Sepia photograph of the four colossal statues of Ramesses II at Abu Simbel temple.",
+    "verdict": "yes",
+    "notes": "One of Egypt's most iconic monuments - the four seated colossi of Ramesses II carved directly from the cliff face. The sheer scale and ambition of this rock-cut temple is breathtaking. Essential imagery for Egyptology enthusiasts.",
+    "batch": 2,
+    "pageText": "Seated Rock-Hewn Colossi of Abu Simbel",
+    "stars": 4
+  },
+  {
+    "file": "5896",
+    "subject": "Karnak Temple Gateway",
+    "description": "Sepia photograph of massive pylon gateway at Temple of Khons in Karnak complex.",
+    "verdict": "yes",
+    "notes": "Impressive Ptolemaic pylon covered in hieroglyphic reliefs showing the king making offerings. The palm trees in the foreground add romantic atmosphere to this view of ancient Karnak. Strong appeal for those interested in Egyptian architecture.",
+    "batch": 2,
+    "pageText": "A Great King's Gateway in Karnak Temple",
+    "stars": 4
   }
 ]
