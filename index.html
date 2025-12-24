@@ -3,194 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1960s Encyclopaedia Wall Art Gallery</title>
+    <title>1960s Encyclopaedia Wall Art</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Georgia', serif;
             background: #1a1a1a;
             color: #e8e8e8;
             line-height: 1.6;
         }
-        
+
         header {
-            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-            padding: 40px 20px;
-            text-align: center;
+            background: #222;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #333;
         }
-        
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+
+        header h1 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 1px;
             color: #f0f0f0;
         }
-        
+
         header p {
-            color: #888;
-            font-size: 1.1rem;
+            color: #666;
+            font-size: 0.8rem;
         }
-        
+
         .controls {
-            background: #222;
-            padding: 20px;
+            background: #1f1f1f;
+            padding: 12px 20px;
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
+            gap: 20px;
             align-items: center;
             border-bottom: 1px solid #333;
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        
-        .controls label {
-            color: #aaa;
-            font-size: 0.9rem;
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        .controls select, .controls input {
+
+        .filter-group label {
+            color: #666;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .chip {
             background: #333;
             border: 1px solid #444;
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        
-        .controls select:focus, .controls input:focus {
-            outline: none;
-            border-color: #666;
-        }
-        
-        .filter-btn {
-            background: #333;
-            border: 1px solid #444;
-            color: #ccc;
-            padding: 8px 16px;
-            border-radius: 4px;
+            color: #999;
+            padding: 5px 12px;
+            border-radius: 15px;
             cursor: pointer;
-            transition: all 0.2s;
+            font-size: 0.85rem;
+            transition: all 0.15s;
+            user-select: none;
         }
-        
-        .filter-btn:hover, .filter-btn.active {
+
+        .chip:hover {
+            background: #3a3a3a;
+            color: #ccc;
+        }
+
+        .chip.active {
             background: #4a7c59;
             border-color: #4a7c59;
             color: #fff;
         }
-        
-        .stats {
-            text-align: center;
-            padding: 15px;
-            background: #1f1f1f;
-            color: #888;
-            font-size: 0.9rem;
+
+        .chip.active.colour {
+            background: #5a8c69;
         }
-        
+
+        .chip.active.bw {
+            background: #666;
+        }
+
+        #searchBox {
+            background: #333;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            width: 180px;
+        }
+
+        #searchBox:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        #searchBox::placeholder {
+            color: #666;
+        }
+
+        .controls select {
+            background: #333;
+            border: 1px solid #444;
+            color: #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .stats {
+            padding: 8px 20px;
+            background: #1a1a1a;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 15px;
+            padding: 20px;
             max-width: 1800px;
             margin: 0 auto;
         }
-        
+
         .card {
             background: #252525;
-            border-radius: 8px;
+            border-radius: 6px;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
         }
-        
+
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
         }
-        
+
         .card.recommended {
             border: 2px solid #4a7c59;
         }
-        
+
         .card.top-pick {
             border: 2px solid #d4af37;
         }
-        
+
         .card-image {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             display: block;
         }
-        
+
         .card-content {
-            padding: 15px;
+            padding: 12px;
         }
-        
+
         .card-title {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             color: #f0f0f0;
         }
-        
+
         .card-file {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 8px;
-        }
-        
-        .card-verdict {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
             font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 6px;
         }
-        
-        .verdict-yes { background: #4a7c59; color: #fff; }
-        .verdict-decent { background: #5a5a2a; color: #fff; }
-        .verdict-weak { background: #6a4a3a; color: #fff; }
-        .verdict-no { background: #4a3a3a; color: #aaa; }
-        
-        .card-batch {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            color: #fff;
-            padding: 3px 8px;
-            border-radius: 4px;
+
+        .verdict-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
             font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        
-        .card-rank {
+
+        .verdict-yes { background: #4a7c59; color: #fff; }
+        .verdict-decent { background: #7a6c3a; color: #fff; }
+        .verdict-weak { background: #6a5a4a; color: #ccc; }
+        .verdict-no { background: #4a3a3a; color: #aaa; }
+
+        .rank-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background: #d4af37;
-            color: #000;
-            width: 28px;
-            height: 28px;
+            color: #1a1a1a;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 0.75rem;
             font-weight: bold;
-            font-size: 0.8rem;
         }
-        
+
+        .card { position: relative; }
+
         /* Modal */
         .modal {
             display: none;
@@ -203,65 +225,53 @@
             z-index: 1000;
             overflow-y: auto;
         }
-        
-        .modal.active {
-            display: flex;
-        }
-        
+
+        .modal.active { display: flex; }
+
         .modal-content {
             display: flex;
-            flex-direction: row;
             max-width: 1400px;
             margin: auto;
             padding: 20px;
             gap: 30px;
             width: 100%;
         }
-        
-        @media (max-width: 900px) {
-            .modal-content {
-                flex-direction: column;
-            }
-        }
-        
+
         .modal-image-container {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .modal-image {
             max-width: 100%;
-            max-height: 80vh;
+            max-height: 85vh;
             object-fit: contain;
-            border-radius: 4px;
         }
-        
+
         .modal-info {
-            flex: 0 0 350px;
-            background: #252525;
-            border-radius: 8px;
-            padding: 30px;
+            width: 350px;
+            flex-shrink: 0;
+            padding: 20px 0;
         }
-        
+
         .modal-title {
-            font-size: 1.8rem;
-            font-weight: 300;
+            font-size: 1.5rem;
             margin-bottom: 5px;
             color: #f0f0f0;
         }
-        
+
         .modal-file {
             color: #666;
             font-size: 0.9rem;
             margin-bottom: 20px;
         }
-        
+
         .modal-section {
             margin-bottom: 20px;
         }
-        
+
         .modal-section h3 {
             color: #888;
             font-size: 0.8rem;
@@ -269,191 +279,115 @@
             letter-spacing: 1px;
             margin-bottom: 8px;
         }
-        
-        .modal-section p {
-            color: #ccc;
-            font-size: 1rem;
-        }
-        
+
         .modal-verdict {
             display: inline-block;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 1rem;
-            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 500;
         }
-        
-        .modal-rank-badge {
-            background: linear-gradient(135deg, #d4af37 0%, #b8960c 100%);
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-top: 10px;
-            display: inline-block;
-        }
-        
+
         .close-btn {
             position: fixed;
-            top: 20px;
+            top: 15px;
             right: 20px;
-            background: #333;
+            background: none;
             border: none;
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
+            color: #888;
+            font-size: 2rem;
             cursor: pointer;
             z-index: 1001;
-            transition: background 0.2s;
         }
-        
-        .close-btn:hover {
-            background: #555;
-        }
-        
+
         .nav-btn {
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            background: #333;
+            background: rgba(255,255,255,0.1);
             border: none;
             color: #fff;
-            width: 50px;
-            height: 80px;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            padding: 15px;
             cursor: pointer;
             z-index: 1001;
-            transition: background 0.2s;
         }
-        
-        .nav-btn:hover {
-            background: #555;
-        }
-        
-        .nav-prev { left: 10px; border-radius: 0 8px 8px 0; }
-        .nav-next { right: 10px; border-radius: 8px 0 0 8px; }
-        
-        /* Top picks section */
-        .top-picks-section {
-            background: #1f1f1f;
-            padding: 40px 30px;
-            border-bottom: 1px solid #333;
-        }
-        
-        .top-picks-section h2 {
-            text-align: center;
-            font-weight: 300;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #d4af37;
-        }
-        
-        .tier {
-            margin-bottom: 30px;
-        }
-        
-        .tier h3 {
-            color: #888;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 3px solid #4a7c59;
-        }
-        
-        .tier-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .tier-item {
-            background: #2a2a2a;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .tier-item:hover {
-            background: #4a7c59;
-        }
-        
-        .tier-item .rank {
-            color: #d4af37;
+
+        .nav-prev { left: 10px; }
+        .nav-next { right: 10px; }
+
+        .modal-rank-badge {
+            background: linear-gradient(135deg, #d4af37, #b8962e);
+            color: #1a1a1a;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
             font-weight: bold;
-            margin-right: 5px;
+        }
+
+        @media (max-width: 900px) {
+            .modal-content {
+                flex-direction: column;
+            }
+            .modal-info {
+                width: 100%;
+            }
+            header {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .controls {
+                gap: 10px;
+            }
+            .filter-group {
+                flex-wrap: wrap;
+            }
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>1960s Encyclopaedia Wall Art</h1>
-        <p>109 vintage encyclopaedia pages reviewed for wall art potential</p>
-        <p style="color: #666; font-size: 0.9rem; margin-top: 8px;">Descriptions and rankings by Claude Opus 4.5</p>
+        <p>109 pages · Descriptions by Claude Opus 4.5</p>
     </header>
-    
+
     <div class="controls">
-        <div>
-            <label>Filter: </label>
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="yes">Recommended</button>
-            <button class="filter-btn" data-filter="decent">Decent</button>
-            <button class="filter-btn" data-filter="no">Not Recommended</button>
+        <div class="filter-group">
+            <label>Show:</label>
+            <span class="chip active" data-filter="yes">Recommended</span>
+            <span class="chip active" data-filter="decent">Decent</span>
+            <span class="chip" data-filter="no">Not Recommended</span>
         </div>
-        <div>
-            <label>Batch: </label>
-            <select id="batchFilter">
-                <option value="all">All Batches</option>
-                <option value="1">Batch 1</option>
-                <option value="2">Batch 2</option>
-                <option value="3">Batch 3</option>
-                <option value="4">Batch 4</option>
-                <option value="5">Batch 5</option>
-                <option value="6">Batch 6</option>
-            </select>
+        <div class="filter-group">
+            <label>Type:</label>
+            <span class="chip colour active" data-type="colour">Colour</span>
+            <span class="chip bw active" data-type="bw">B&W</span>
         </div>
-        <div>
-            <label>Sort: </label>
+        <div class="filter-group">
             <select id="sortOrder">
-                <option value="rank">By Rank</option>
-                <option value="file">By File Number</option>
-                <option value="batch">By Batch</option>
+                <option value="rank">Sort by Rank</option>
+                <option value="file">Sort by File #</option>
             </select>
         </div>
-        <div>
-            <input type="text" id="searchBox" placeholder="Search subjects...">
-        </div>
+        <input type="text" id="searchBox" placeholder="Search...">
     </div>
-    
-    <div class="stats" id="stats">Showing 100 images</div>
-    
-    <section class="top-picks-section">
-        <h2>★ Top 20 Picks ★</h2>
-        <div class="tier">
-            <h3>Tier 1: Outstanding</h3>
-            <div class="tier-items" id="tier1"></div>
-        </div>
-        <div class="tier">
-            <h3>Tier 2: Excellent</h3>
-            <div class="tier-items" id="tier2"></div>
-        </div>
-        <div class="tier">
-            <h3>Tier 3: Very Good</h3>
-            <div class="tier-items" id="tier3"></div>
-        </div>
-        <div class="tier">
-            <h3>Tier 4: Good</h3>
-            <div class="tier-items" id="tier4"></div>
-        </div>
-    </section>
-    
+
+    <div class="stats" id="stats"></div>
+
     <div class="gallery" id="gallery"></div>
-    
+
     <div class="modal" id="modal">
         <button class="close-btn" onclick="closeModal()">×</button>
         <button class="nav-btn nav-prev" onclick="navigate(-1)">‹</button>
@@ -465,25 +399,20 @@
             <div class="modal-info">
                 <h2 class="modal-title" id="modalTitle"></h2>
                 <p class="modal-file" id="modalFile"></p>
-                
+
                 <div class="modal-section">
                     <h3>Wall Art Verdict</h3>
                     <span class="modal-verdict" id="modalVerdict"></span>
                 </div>
-                
+
                 <div class="modal-section">
                     <h3>Description</h3>
                     <p id="modalDescription"></p>
                 </div>
-                
+
                 <div class="modal-section">
                     <h3>Notes</h3>
                     <p id="modalNotes"></p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Batch</h3>
-                    <p id="modalBatch"></p>
                 </div>
 
                 <div class="modal-section" id="modalPageTextSection">
@@ -501,13 +430,19 @@
 
     <script>
 let imageData = [];
-
-let currentFilter = 'all';
-let currentBatch = 'all';
 let currentSort = 'rank';
 let searchTerm = '';
 let currentModalIndex = -1;
 let filteredData = [];
+
+// Filter states (multi-select)
+let activeVerdicts = new Set(['yes', 'decent']);
+let activeTypes = new Set(['colour', 'bw']);
+
+function isBlackAndWhite(item) {
+    const desc = (item.description || '').toLowerCase();
+    return desc.includes('b&w') || desc.includes('b&w') || desc.includes('sepia');
+}
 
 function getVerdictClass(verdict) {
     if (verdict === 'yes') return 'verdict-yes';
@@ -525,16 +460,18 @@ function getVerdictLabel(verdict) {
 
 function filterAndSort() {
     filteredData = imageData.filter(item => {
-        // Filter by verdict
-        if (currentFilter !== 'all') {
-            if (currentFilter === 'yes' && item.verdict !== 'yes') return false;
-            if (currentFilter === 'decent' && item.verdict !== 'decent') return false;
-            if (currentFilter === 'no' && (item.verdict !== 'no' && item.verdict !== 'weak')) return false;
+        // Filter by verdict (union of selected)
+        const verdictMatch = item.verdict === 'weak' ?
+            activeVerdicts.has('no') : activeVerdicts.has(item.verdict);
+        if (!verdictMatch && activeVerdicts.size > 0) return false;
+
+        // Filter by type (B&W vs Colour)
+        if (activeTypes.size > 0 && activeTypes.size < 2) {
+            const isBW = isBlackAndWhite(item);
+            if (activeTypes.has('bw') && !isBW) return false;
+            if (activeTypes.has('colour') && isBW) return false;
         }
-        
-        // Filter by batch
-        if (currentBatch !== 'all' && item.batch !== parseInt(currentBatch)) return false;
-        
+
         // Filter by search
         if (searchTerm) {
             const search = searchTerm.toLowerCase();
@@ -547,27 +484,21 @@ function filterAndSort() {
             ].filter(Boolean).map(s => s.toLowerCase());
             if (!searchFields.some(field => field.includes(search))) return false;
         }
-        
+
         return true;
     });
-    
+
     // Sort
-    if (currentSort === 'rank') {
-        filteredData.sort((a, b) => {
+    filteredData.sort((a, b) => {
+        if (currentSort === 'rank') {
             if (a.rank && b.rank) return a.rank - b.rank;
             if (a.rank) return -1;
             if (b.rank) return 1;
             return parseInt(a.file) - parseInt(b.file);
-        });
-    } else if (currentSort === 'file') {
-        filteredData.sort((a, b) => parseInt(a.file) - parseInt(b.file));
-    } else if (currentSort === 'batch') {
-        filteredData.sort((a, b) => {
-            if (a.batch !== b.batch) return a.batch - b.batch;
-            return parseInt(a.file) - parseInt(b.file);
-        });
-    }
-    
+        }
+        return parseInt(a.file) - parseInt(b.file);
+    });
+
     renderGallery();
     updateStats();
 }
@@ -575,48 +506,38 @@ function filterAndSort() {
 function renderGallery() {
     const gallery = document.getElementById('gallery');
     gallery.innerHTML = filteredData.map((item, index) => `
-        <div class="card ${item.verdict === 'yes' ? 'recommended' : ''} ${item.rank ? 'top-pick' : ''}" 
+        <div class="card ${item.verdict === 'yes' ? 'recommended' : ''} ${item.rank && item.rank <= 5 ? 'top-pick' : ''}"
              onclick="openModal(${index})">
-            <span class="card-batch">Batch ${item.batch}</span>
-            ${item.rank ? `<span class="card-rank">#${item.rank}</span>` : ''}
+            ${item.rank ? `<div class="rank-badge">${item.rank}</div>` : ''}
             <img class="card-image" src="images/IMG_${item.file}.jpg" alt="${item.subject}" loading="lazy">
             <div class="card-content">
-                <h3 class="card-title">${item.subject}</h3>
-                <p class="card-file">IMG_${item.file}</p>
-                <span class="card-verdict ${getVerdictClass(item.verdict)}">${getVerdictLabel(item.verdict)}</span>
+                <div class="card-title">${item.subject}</div>
+                <div class="card-file">#${item.file}</div>
+                <span class="verdict-badge ${getVerdictClass(item.verdict)}">${getVerdictLabel(item.verdict)}</span>
             </div>
         </div>
     `).join('');
 }
 
 function updateStats() {
-    const stats = document.getElementById('stats');
     const recommended = filteredData.filter(i => i.verdict === 'yes').length;
-    stats.textContent = `Showing ${filteredData.length} images (${recommended} recommended)`;
+    document.getElementById('stats').textContent =
+        `Showing ${filteredData.length} images (${recommended} recommended)`;
 }
 
 function openModal(index) {
     currentModalIndex = index;
     const item = filteredData[index];
-    
+
     document.getElementById('modalImage').src = `images/IMG_${item.file}.jpg`;
     document.getElementById('modalTitle').textContent = item.subject;
-    document.getElementById('modalFile').textContent = `IMG_${item.file}.jpg`;
+    document.getElementById('modalFile').textContent = `#${item.file}`;
     document.getElementById('modalDescription').textContent = item.description;
     document.getElementById('modalNotes').textContent = item.notes;
-    document.getElementById('modalBatch').textContent = `Batch ${item.batch}`;
-    
+
     const verdictEl = document.getElementById('modalVerdict');
     verdictEl.textContent = getVerdictLabel(item.verdict);
-    verdictEl.className = `modal-verdict ${getVerdictClass(item.verdict)}`;
-    
-    const rankSection = document.getElementById('modalRankSection');
-    if (item.rank) {
-        rankSection.style.display = 'block';
-        document.getElementById('modalRank').textContent = `#${item.rank} of 100`;
-    } else {
-        rankSection.style.display = 'none';
-    }
+    verdictEl.className = 'modal-verdict ' + getVerdictClass(item.verdict);
 
     const pageTextSection = document.getElementById('modalPageTextSection');
     if (item.pageText) {
@@ -624,6 +545,14 @@ function openModal(index) {
         document.getElementById('modalPageText').textContent = item.pageText;
     } else {
         pageTextSection.style.display = 'none';
+    }
+
+    const rankSection = document.getElementById('modalRankSection');
+    if (item.rank) {
+        rankSection.style.display = 'block';
+        document.getElementById('modalRank').textContent = `#${item.rank}`;
+    } else {
+        rankSection.style.display = 'none';
     }
 
     document.getElementById('modal').classList.add('active');
@@ -636,62 +565,40 @@ function closeModal() {
 }
 
 function navigate(direction) {
-    currentModalIndex += direction;
-    if (currentModalIndex < 0) currentModalIndex = filteredData.length - 1;
-    if (currentModalIndex >= filteredData.length) currentModalIndex = 0;
-    openModal(currentModalIndex);
-}
-
-function scrollToImage(file) {
-    closeModal();
-    currentFilter = 'all';
-    currentBatch = 'all';
-    searchTerm = '';
-    document.getElementById('batchFilter').value = 'all';
-    document.getElementById('searchBox').value = '';
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector('[data-filter="all"]').classList.add('active');
-    
-    filterAndSort();
-    
-    const index = filteredData.findIndex(i => i.file === file);
-    if (index >= 0) {
-        openModal(index);
+    const newIndex = currentModalIndex + direction;
+    if (newIndex >= 0 && newIndex < filteredData.length) {
+        openModal(newIndex);
     }
 }
 
-function renderTopPicks() {
-    const tiers = [
-        { id: 'tier1', items: imageData.filter(i => i.rank && i.rank <= 5) },
-        { id: 'tier2', items: imageData.filter(i => i.rank && i.rank > 5 && i.rank <= 10) },
-        { id: 'tier3', items: imageData.filter(i => i.rank && i.rank > 10 && i.rank <= 15) },
-        { id: 'tier4', items: imageData.filter(i => i.rank && i.rank > 15 && i.rank <= 20) }
-    ];
-    
-    tiers.forEach(tier => {
-        const container = document.getElementById(tier.id);
-        tier.items.sort((a, b) => a.rank - b.rank);
-        container.innerHTML = tier.items.map(item => `
-            <div class="tier-item" onclick="scrollToImage('${item.file}')">
-                <span class="rank">#${item.rank}</span> ${item.subject}
-            </div>
-        `).join('');
-    });
-}
-
-// Event listeners
-document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentFilter = btn.dataset.filter;
+// Event listeners for verdict filter chips
+document.querySelectorAll('.chip[data-filter]').forEach(chip => {
+    chip.addEventListener('click', () => {
+        const filter = chip.dataset.filter;
+        if (chip.classList.contains('active')) {
+            chip.classList.remove('active');
+            activeVerdicts.delete(filter);
+        } else {
+            chip.classList.add('active');
+            activeVerdicts.add(filter);
+        }
         filterAndSort();
     });
 });
 
-document.getElementById('batchFilter').addEventListener('change', (e) => {
-    currentBatch = e.target.value;
-    filterAndSort();
+// Event listeners for type filter chips
+document.querySelectorAll('.chip[data-type]').forEach(chip => {
+    chip.addEventListener('click', () => {
+        const type = chip.dataset.type;
+        if (chip.classList.contains('active')) {
+            chip.classList.remove('active');
+            activeTypes.delete(type);
+        } else {
+            chip.classList.add('active');
+            activeTypes.add(type);
+        }
+        filterAndSort();
+    });
 });
 
 document.getElementById('sortOrder').addEventListener('change', (e) => {
@@ -721,12 +628,11 @@ fetch('data.json')
     .then(response => response.json())
     .then(data => {
         imageData = data;
-        renderTopPicks();
         filterAndSort();
     })
     .catch(error => {
         console.error('Error loading data:', error);
-        document.getElementById('gallery').innerHTML = '<p style="color: red; padding: 20px;">Error loading image data. Please refresh the page.</p>';
+        document.getElementById('gallery').innerHTML = '<p style="color: red; padding: 20px;">Error loading image data.</p>';
     });
     </script>
 </body>
