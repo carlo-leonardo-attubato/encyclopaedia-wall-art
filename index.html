@@ -14,33 +14,12 @@
             line-height: 1.6;
         }
 
-        header {
-            background: #222;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #333;
-        }
-
-        header h1 {
-            font-size: 1.3rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            color: #f0f0f0;
-        }
-
-        header p {
-            color: #666;
-            font-size: 0.8rem;
-        }
-
         .controls {
             background: #1f1f1f;
             padding: 12px 20px;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
             border-bottom: 1px solid #333;
             position: sticky;
@@ -48,17 +27,17 @@
             z-index: 100;
         }
 
+        .controls h1 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #888;
+            margin-right: 10px;
+        }
+
         .filter-group {
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
-
-        .filter-group label {
-            color: #666;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            gap: 6px;
         }
 
         .chip {
@@ -339,29 +318,23 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>1960s Encyclopaedia Wall Art</h1>
-        <p>109 pages · Descriptions by Claude Opus 4.5</p>
-    </header>
-
     <div class="controls">
+        <h1>1960s Encyclopaedia Wall Art</h1>
         <div class="filter-group">
-            <label>Show:</label>
-            <span class="chip active" data-filter="yes">Recommended</span>
-            <span class="chip active" data-filter="decent">Decent</span>
-            <span class="chip" data-filter="no">Not Recommended</span>
+            <span class="chip active" data-stars="5">5★</span>
+            <span class="chip active" data-stars="4">4★</span>
+            <span class="chip active" data-stars="3">3★</span>
+            <span class="chip" data-stars="2">2★</span>
+            <span class="chip" data-stars="1">1★</span>
         </div>
         <div class="filter-group">
-            <label>Type:</label>
             <span class="chip colour active" data-type="colour">Colour</span>
             <span class="chip bw active" data-type="bw">B&W</span>
         </div>
-        <div class="filter-group">
-            <select id="sortOrder">
-                <option value="stars">Sort by Stars</option>
-                <option value="file">Sort by File #</option>
-            </select>
-        </div>
+        <select id="sortOrder">
+            <option value="stars">By Rating</option>
+            <option value="file">By File #</option>
+        </select>
         <input type="text" id="searchBox" placeholder="Search...">
     </div>
 
@@ -417,7 +390,7 @@ let currentModalIndex = -1;
 let filteredData = [];
 
 // Filter states (multi-select)
-let activeVerdicts = new Set(['yes', 'decent']);
+let activeStars = new Set([5, 4, 3]);
 let activeTypes = new Set(['colour', 'bw']);
 
 function isBlackAndWhite(item) {
@@ -441,10 +414,8 @@ function getVerdictLabel(verdict) {
 
 function filterAndSort() {
     filteredData = imageData.filter(item => {
-        // Filter by verdict (union of selected)
-        const verdictMatch = item.verdict === 'weak' ?
-            activeVerdicts.has('no') : activeVerdicts.has(item.verdict);
-        if (!verdictMatch && activeVerdicts.size > 0) return false;
+        // Filter by stars
+        if (activeStars.size > 0 && !activeStars.has(item.stars)) return false;
 
         // Filter by type (B&W vs Colour)
         if (activeTypes.size > 0 && activeTypes.size < 2) {
@@ -546,16 +517,16 @@ function navigate(direction) {
     }
 }
 
-// Event listeners for verdict filter chips
-document.querySelectorAll('.chip[data-filter]').forEach(chip => {
+// Event listeners for star filter chips
+document.querySelectorAll('.chip[data-stars]').forEach(chip => {
     chip.addEventListener('click', () => {
-        const filter = chip.dataset.filter;
+        const stars = parseInt(chip.dataset.stars);
         if (chip.classList.contains('active')) {
             chip.classList.remove('active');
-            activeVerdicts.delete(filter);
+            activeStars.delete(stars);
         } else {
             chip.classList.add('active');
-            activeVerdicts.add(filter);
+            activeStars.add(stars);
         }
         filterAndSort();
     });
