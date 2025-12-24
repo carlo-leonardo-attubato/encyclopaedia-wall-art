@@ -1358,5 +1358,45 @@
     "batch": 2,
     "pageText": "",
     "stars": 3
+  },
+  {
+    "file": "5853",
+    "subject": "Tropical Aquarium Fish",
+    "description": "Colour illustration of tropical fish in oval frame on purple background with coral.",
+    "verdict": "yes",
+    "notes": "Elegant illustration of tropical aquarium fish in an oval frame against deep purple with white coral decoration. Blue betta, orange goldfish, angelfish among aquatic plants. Almost Art Deco in feel - highly decorative and frameable.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 5
+  },
+  {
+    "file": "5854",
+    "subject": "Pioneer Photography Portrait",
+    "description": "Sepia calotype portrait from 1845 by David Octavius Hill.",
+    "verdict": "no",
+    "notes": "Historical calotype portrait from the dawn of photography (1845). Of interest to photography historians but the dark sepia tones and formal Victorian pose have no decorative appeal for modern walls.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 2
+  },
+  {
+    "file": "5855",
+    "subject": "Ancient Egyptian Boat Models",
+    "description": "Colour photographs of Egyptian tomb boat models showing Nile navigation.",
+    "verdict": "maybe",
+    "notes": "Detailed photographs of ancient Egyptian boat models from the Metropolitan Museum. Fascinating historical artifacts showing 4000-year-old craftsmanship. Museum catalogue feel rather than decorative art, but appeals to Egyptology enthusiasts.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 3
+  },
+  {
+    "file": "5856",
+    "subject": "Egyptian Treasures (Tutankhamun & Nefertiti)",
+    "description": "Colour photographs of Tutankhamun's sarcophagus and Nefertiti bust.",
+    "verdict": "yes",
+    "notes": "Iconic Egyptian art - Tutankhamun's golden sarcophagus and the famous Nefertiti bust. These are among the most recognizable ancient artworks. Rich gold tones and elegant sculpture. Appeals to anyone interested in ancient Egypt.",
+    "batch": 2,
+    "pageText": "",
+    "stars": 4
   }
 ]
