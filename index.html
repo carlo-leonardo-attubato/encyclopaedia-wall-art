@@ -164,6 +164,31 @@
 
         .card { position: relative; }
 
+        .card-tooltip {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.9);
+            color: #ddd;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            max-width: 300px;
+            width: max-content;
+            z-index: 50;
+            margin-bottom: 8px;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .card:hover .card-tooltip {
+            display: block;
+        }
+
         /* Modal */
         .modal {
             display: none;
@@ -405,6 +430,7 @@ function renderGallery() {
     gallery.innerHTML = filteredData.map((item, index) => `
         <div class="card ${item.stars >= 4 ? 'recommended' : ''} ${item.stars === 5 ? 'top-pick' : ''}"
              onclick="openModal(${index})">
+            ${item.pageText ? `<div class="card-tooltip">${item.pageText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>` : ''}
             <img class="card-image" src="images/IMG_${item.file}.jpg" alt="${item.subject}" loading="lazy">
             <div class="card-content">
                 <div class="card-title">${item.subject}</div>
