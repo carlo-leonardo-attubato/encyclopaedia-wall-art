@@ -414,10 +414,7 @@ function renderGallery() {
 }
 
 function updateStats() {
-    const fivestar = filteredData.filter(i => i.stars === 5).length;
-    const fourstar = filteredData.filter(i => i.stars === 4).length;
-    document.getElementById('stats').textContent =
-        `Showing ${filteredData.length} images (${fivestar} × 5★, ${fourstar} × 4★)`;
+    document.getElementById('stats').textContent = `${filteredData.length} images`;
 }
 
 function openModal(index) {
