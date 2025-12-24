@@ -387,7 +387,8 @@ let activeTypes = new Set(['colour', 'bw']);
 
 function isBlackAndWhite(item) {
     const desc = (item.description || '').toLowerCase();
-    return desc.includes('b&w') || desc.includes('sepia') || desc.includes('black and white');
+    // Only match if it starts with "b&w" to avoid mixed pages like "Two photos: B&W... colour..."
+    return desc.startsWith('b&w') || desc.includes('b&w photo') || desc.includes('b&w,');
 }
 
 function getVerdictClass(verdict) {
