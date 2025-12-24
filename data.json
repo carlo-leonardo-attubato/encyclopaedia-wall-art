@@ -1788,5 +1788,55 @@
     "batch": 2,
     "pageText": "A Great King's Gateway in Karnak Temple",
     "stars": 4
+  },
+  {
+    "file": "5897",
+    "subject": "Cone Nebula",
+    "description": "B&W astronomical photograph of the Cone Nebula taken with Mount Palomar 200-inch telescope.",
+    "verdict": "yes",
+    "notes": "Haunting deep space imagery from the golden age of astronomical photography. The Cone Nebula's ghostly form emerging from cosmic dust creates an ethereal, almost spiritual atmosphere. Excellent for astronomy enthusiasts and those who appreciate the sublime.",
+    "batch": 2,
+    "pageText": "Vast Cloud of Dust Between the Stars",
+    "stars": 4
+  },
+  {
+    "file": "5898",
+    "subject": "Cambridge University",
+    "description": "Sepia photographs of the River Cam, the Backs, Trinity Bridge, and Bridge of Sighs at Cambridge.",
+    "verdict": "yes",
+    "notes": "Classic views of one of the world's great universities. The tranquil Backs along the Cam and the elegant Bridge of Sighs capture Cambridge's scholarly beauty. Perfect for academics, Anglophiles, and lovers of historic architecture.",
+    "batch": 2,
+    "pageText": "Where the Cam Flows Through Cambridge",
+    "stars": 4
+  },
+  {
+    "file": "5899",
+    "subject": "Australian Outback Rocks",
+    "description": "Colour photographs of Devil's Marbles granite boulders and Mount Olga (Kata Tjuta).",
+    "verdict": "yes",
+    "notes": "Striking geological formations of the Australian outback. The impossible balance of the Devil's Marbles and the dramatic red domes of Kata Tjuta showcase nature's sculptural power. Excellent for landscape art and travel enthusiasts.",
+    "batch": 2,
+    "pageText": "Fantastic Rocks of the Vast Outback",
+    "stars": 4
+  },
+  {
+    "file": "5900",
+    "subject": "Alice Springs and Uluru",
+    "description": "Colour photographs of Alice Springs township and Ayers Rock (Uluru) monolith.",
+    "verdict": "yes",
+    "notes": "Iconic Australian imagery - the remote outback town of Alice Springs and the sacred monolith of Uluru. The red rock glowing against the pale sky is one of Australia's most recognizable landmarks. Strong travel and natural history appeal.",
+    "batch": 2,
+    "pageText": "Lone Town and Rock of Central Australia",
+    "stars": 4
+  },
+  {
+    "file": "5901",
+    "subject": "Oban Bay Scotland",
+    "description": "Colour photograph of Oban Bay with Mountains of Morven and figures in Highland dress.",
+    "verdict": "yes",
+    "notes": "Picturesque Scottish coastal scene - Oban's sheltered bay with mountain backdrop and figures in traditional Highland dress. The combination of natural beauty and Scottish culture creates romantic, nostalgic appeal. Lovely for Scotland enthusiasts.",
+    "batch": 2,
+    "pageText": "Oban Bay and the Mountains of Morven",
+    "stars": 4
   }
 ]
