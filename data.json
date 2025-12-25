@@ -2038,5 +2038,55 @@
     "batch": 2,
     "pageText": "Dragon-Flies Poised on Gauzy Wings",
     "stars": 5
+  },
+  {
+    "file": "5922",
+    "subject": "British Grasses",
+    "description": "Colour botanical illustration of British grasses in flower with diverse shapes, sizes and colours.",
+    "verdict": "yes",
+    "notes": "Delicate botanical illustration capturing the overlooked beauty of British grasses - golden wheats, pink-red spikelets, feathery plumes. The variety and subtle colours make this refined natural history art suitable for elegant interiors.",
+    "batch": 2,
+    "pageText": "Some Beautiful British Grasses in Flower",
+    "stars": 4
+  },
+  {
+    "file": "5923",
+    "subject": "Minoan Artifacts",
+    "description": "Colour plate of Minoan pottery and painted sarcophagus from ancient Crete (1500-1300 BC).",
+    "verdict": "yes",
+    "notes": "Fascinating Minoan treasures - spiraling pottery designs and the elaborate Hagia Triada sarcophagus with its burial scenes. The warm earth tones and ancient artistry appeal to those interested in archaeology and Mediterranean cultures.",
+    "batch": 2,
+    "pageText": "Treasures from Tombs of Ancient Crete",
+    "stars": 4
+  },
+  {
+    "file": "5924",
+    "subject": "Prehistoric Humans",
+    "description": "Colour photographs of museum dioramas showing prehistoric cave-dwellers with fire and tools.",
+    "verdict": "maybe",
+    "notes": "Educational museum dioramas depicting early human life - fire-making, cave dwelling, primitive tools. Anthropologically interesting but the clearly staged museum settings limit artistic appeal. Better for educational contexts.",
+    "batch": 2,
+    "pageText": "The \"Dawn Men\" and the Cave-Dwellers",
+    "stars": 3
+  },
+  {
+    "file": "5925",
+    "subject": "Antique Painted Fans",
+    "description": "B&W photographs of 18th-century painted silk fans from Victoria and Albert Museum.",
+    "verdict": "maybe",
+    "notes": "Exquisite 18th-century fans showing delicate craftsmanship - silk painting, sequins, ivory handles. The B&W format doesn't capture their full beauty, but appeals to those interested in decorative arts and fashion history.",
+    "batch": 2,
+    "pageText": "Painted Fans of Delicate Workmanship",
+    "stars": 3
+  },
+  {
+    "file": "5926",
+    "subject": "British Fan Designs",
+    "description": "Colour plate showing artistic fan designs by George Sheringham and Charles Conder.",
+    "verdict": "maybe",
+    "notes": "Artistic British fan designs - Sheringham's ethereal \"Cobweb\" pattern and Conder's Eastern-influenced \"Buddha Fan\" in watercolours. Appeals to decorative arts enthusiasts and collectors but niche decorative appeal.",
+    "batch": 2,
+    "pageText": "Delicacy of Taste in British Fan Design",
+    "stars": 3
   }
 ]
