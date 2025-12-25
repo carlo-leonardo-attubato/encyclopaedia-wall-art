@@ -30,6 +30,7 @@ const server = http.createServer((req, res) => {
         if (item) {
           if (rating !== undefined) item.stars = rating;
           if (rotation !== undefined) item.rotation = rotation;
+          item.lastUpdated = new Date().toISOString();
           fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success: true }));
