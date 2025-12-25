@@ -2838,5 +2838,45 @@
     "batch": 2,
     "pageText": "Glorious West Front of York Minster",
     "stars": 3
+  },
+  {
+    "file": "6005",
+    "subject": "Six King Class Steam Locomotives",
+    "description": "Sepia photograph showing six King class steam locomotives lined up at a railway depot, polished and prepared for a day's service on the Western Region.",
+    "verdict": "maybe",
+    "notes": "Classic railway photography capturing the impressive sight of six locomotives in formation. Strong appeal for railway enthusiasts and those nostalgic for the steam era. The sepia tone adds period atmosphere but limits broader decorative appeal.",
+    "batch": 2,
+    "pageText": "Six \"Kings\" Spick and Span for a Day's Run",
+    "stars": 3
+  },
+  {
+    "file": "6006",
+    "subject": "Machine-Made Lace Patterns",
+    "description": "Black and white illustration showing five examples of machine-made lace including guipure laces and Valenciennes lace with delicate floral patterns.",
+    "verdict": "maybe",
+    "notes": "Elegant textile reference plate showcasing intricate lace patterns. The delicate floral designs have artistic merit and could suit a craft room, sewing space, or vintage-themed decor. Niche appeal for textile enthusiasts.",
+    "batch": 2,
+    "pageText": "Five Lovely Examples of Machine-Made Lace",
+    "stars": 3
+  },
+  {
+    "file": "6007",
+    "subject": "First Aid Techniques",
+    "description": "Instructional illustration showing first aid techniques including how to support an injured arm with slings and the Holger-Nielsen method of artificial respiration.",
+    "verdict": "no",
+    "notes": "Purely educational first aid instruction diagrams. While historically interesting as a snapshot of mid-century first aid methods, the clinical instructional nature makes it entirely unsuitable as decorative wall art.",
+    "batch": 2,
+    "pageText": "First Aid - Support for an Injured Arm",
+    "stars": 1
+  },
+  {
+    "file": "6008",
+    "subject": "St Bridget's House Office Building",
+    "description": "Sepia photograph of St. Bridget's House, a large modernist office building described as exceptionally light and airy, with St. Bride's Church steeple visible.",
+    "verdict": "no",
+    "notes": "Documentary architectural photograph of a mid-century office block. While showcasing modernist architecture, the utilitarian commercial building lacks the visual interest or artistic merit needed for decorative display.",
+    "batch": 2,
+    "pageText": "The Building Ready for Occupation",
+    "stars": 2
   }
 ]
