@@ -2238,5 +2238,55 @@
     "batch": 2,
     "pageText": "Man Invades the Frozen Wastes",
     "stars": 4
+  },
+  {
+    "file": "5943",
+    "subject": "Photomicrography",
+    "description": "B&W photomicrograph showing fly wing hairs magnified 8,000 times.",
+    "verdict": "no",
+    "notes": "Technical demonstration of microscope photography. While scientifically interesting, the abstract shapes of magnified fly hairs have minimal decorative appeal. Purely educational content.",
+    "batch": 2,
+    "pageText": "One Marvel of Photomicrography",
+    "stars": 2
+  },
+  {
+    "file": "5944",
+    "subject": "Portrait Photography",
+    "description": "B&W portrait of elderly woman in headscarf taken with Contax II miniature camera.",
+    "verdict": "yes",
+    "notes": "Exceptional portrait photography - the weathered face of an elderly woman in traditional headscarf captured with remarkable detail. The dramatic lighting and soulful expression make this genuine photographic art worthy of display.",
+    "batch": 2,
+    "pageText": "Perfect Portrait with a Miniature Camera",
+    "stars": 4
+  },
+  {
+    "file": "5945",
+    "subject": "School for Blind Boys",
+    "description": "B&W photographs of physical training and games at Worcester College for Blind Boys.",
+    "verdict": "no",
+    "notes": "Documentary photographs of education for blind children. While historically and socially significant, the institutional subject matter has no decorative appeal. Suitable for educational archives.",
+    "batch": 2,
+    "pageText": "Training for an Active Part in Life",
+    "stars": 2
+  },
+  {
+    "file": "5946",
+    "subject": "Egyptian Peasant Life",
+    "description": "B&W photographs of Egyptian mud brick making and traditional threshing with animals.",
+    "verdict": "no",
+    "notes": "Ethnographic documentation of traditional Egyptian rural life - brick-making and threshing. Anthropologically interesting but the documentary style and mundane subject matter limit decorative appeal.",
+    "batch": 2,
+    "pageText": "Unhurried Workers of the Nile Valley",
+    "stars": 2
+  },
+  {
+    "file": "5947",
+    "subject": "Chinese Bird Culture",
+    "description": "B&W photographs of Chinese men with caged songbirds and trained cormorant fishing.",
+    "verdict": "maybe",
+    "notes": "Fascinating glimpse into Chinese traditions - pet songbirds taken for airings and cormorant fishing with neck collars. The exotic cultural practices have ethnographic interest and some visual appeal.",
+    "batch": 2,
+    "pageText": "Birds for Singing and for Fishing",
+    "stars": 3
   }
 ]
