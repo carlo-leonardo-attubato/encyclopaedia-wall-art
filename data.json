@@ -2738,5 +2738,55 @@
     "batch": 2,
     "pageText": "Dazzling Pattern of Massed Lupins",
     "stars": 5
+  },
+  {
+    "file": "5994",
+    "subject": "Lupin Sylvia Sankey",
+    "description": "Colour photograph of Sylvia Sankey lupins with purple and pink flower spikes.",
+    "verdict": "yes",
+    "notes": "Elegant lupin variety showing the tall graceful spikes in soft purple and pink. The delicate colours against grey-green foliage create a refined botanical study. Perfect for garden lovers and floral art enthusiasts.",
+    "batch": 2,
+    "pageText": "Lupin's Tall Spikes of Blossom",
+    "stars": 4
+  },
+  {
+    "file": "5995",
+    "subject": "Luttrell Psalter Page",
+    "description": "B&W reproduction of page from Luttrell Psalter (c.1340) showing Sir Geoffrey Luttrell.",
+    "verdict": "yes",
+    "notes": "Important medieval manuscript art from the British Museum - Sir Geoffrey Luttrell departing for tournament with heraldic trappings. The intricate marginal decorations and Gothic text showcase medieval artistry. Appeals to medieval history enthusiasts.",
+    "batch": 2,
+    "pageText": "Page from the Famous Luttrell Psalter",
+    "stars": 4
+  },
+  {
+    "file": "5996",
+    "subject": "Lindisfarne Gospels",
+    "description": "Colour plate of illuminated page from Lindisfarne Gospels showing St. Luke's Gospel.",
+    "verdict": "yes",
+    "notes": "Magnificent Anglo-Saxon illumination - the Lindisfarne Gospels represent the pinnacle of early medieval manuscript art. The intricate Celtic knotwork and vibrant colours are breathtaking. Museum-quality art history.",
+    "batch": 2,
+    "pageText": "Superb Illumination of the Gospels",
+    "stars": 5
+  },
+  {
+    "file": "5997",
+    "subject": "Dunkirk Evacuation Painting",
+    "description": "Colour painting by Charles Cundall showing the Dunkirk evacuation May-June 1940.",
+    "verdict": "yes",
+    "notes": "Historic painting capturing one of Britain's defining moments - 300,000 troops rescued from Dunkirk beaches. The dramatic scene with ships, aircraft, and waiting soldiers conveys the operation's scale. Significant WWII art.",
+    "batch": 2,
+    "pageText": "The Evacuation from Dunkirk - A Stirring Episode in Britain's History",
+    "stars": 4
+  },
+  {
+    "file": "5998",
+    "subject": "Brumas Polar Bear Cub",
+    "description": "B&W photograph of famous polar bear cub Brumas with mother Ivy at London Zoo.",
+    "verdict": "maybe",
+    "notes": "Charming wildlife photograph of celebrity polar bear Brumas born 1949. The mother-cub interaction is endearing. Appeals to animal lovers and those nostalgic for post-war London Zoo history.",
+    "batch": 2,
+    "pageText": "Famous Polar Bear Cub of the London Zoo",
+    "stars": 3
   }
 ]
