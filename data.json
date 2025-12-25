@@ -2138,5 +2138,55 @@
     "batch": 2,
     "pageText": "Physical Map of England",
     "stars": 3
+  },
+  {
+    "file": "5932",
+    "subject": "Signal Flags and Signs",
+    "description": "Colour reference chart of international signal flags, air traffic, gale warnings, traffic lights, and railway signals.",
+    "verdict": "maybe",
+    "notes": "Comprehensive signaling reference with colourful flags and symbols. The graphic variety and bold colours have some visual appeal for those interested in maritime, aviation, or transport history. Could work in a themed space.",
+    "batch": 2,
+    "pageText": "Signalling by Sea, Land, and Air",
+    "stars": 3
+  },
+  {
+    "file": "5933",
+    "subject": "Eggs of Various Species",
+    "description": "B&W scientific illustration showing eggs from butterflies, fish, birds, reptiles, and insects.",
+    "verdict": "maybe",
+    "notes": "Fascinating comparative study of egg forms - from tiny insect eggs to the massive ostrich egg. The scientific precision and variety make this interesting natural history art, though the B&W format limits decorative appeal.",
+    "batch": 2,
+    "pageText": "Eggs in Unfamiliar Forms and Sizes",
+    "stars": 3
+  },
+  {
+    "file": "5934",
+    "subject": "Worker Bee Life Cycle",
+    "description": "B&W scientific illustration showing the life and work of honey bees on honeycomb.",
+    "verdict": "maybe",
+    "notes": "Detailed illustration of bee society - foraging, honey storage, queen cells, and worker anatomy. Educational and charming for apiarists and nature enthusiasts, but the B&W format and technical nature limit broader appeal.",
+    "batch": 2,
+    "pageText": "All in the Day's Work of the Worker Bee",
+    "stars": 3
+  },
+  {
+    "file": "5936",
+    "subject": "Cell Division",
+    "description": "Scientific illustration showing stages of mitosis - cell division from fertilized egg.",
+    "verdict": "no",
+    "notes": "Technical biology illustration showing chromosome separation and cell division stages. While scientifically important, the abstract cellular imagery has minimal decorative appeal. Suitable only for scientific contexts.",
+    "batch": 2,
+    "pageText": "Most Wonderful of All Life's Processes",
+    "stars": 2
+  },
+  {
+    "file": "5937",
+    "subject": "Paper-Making Fibres",
+    "description": "B&W microscopic views of paper production showing raw materials and fibre processing.",
+    "verdict": "no",
+    "notes": "Technical industrial illustration of paper-making processes. Microscopic views of esparto grass, rag, and wood pulp fibres. Purely educational with no decorative value. Not suitable for wall art.",
+    "batch": 2,
+    "pageText": "Work of the Beaters in Paper-Making",
+    "stars": 2
   }
 ]
