@@ -2288,5 +2288,55 @@
     "batch": 2,
     "pageText": "Birds for Singing and for Fishing",
     "stars": 3
+  },
+  {
+    "file": "5948",
+    "subject": "Arab Falconers Muscat",
+    "description": "B&W photograph of Arab men in Muscat with trained hunting hawks and traditional dress.",
+    "verdict": "maybe",
+    "notes": "Exotic glimpse into Arabian falcon culture - desert sportsmen with their prized hunting birds. The traditional dress and weaponry add ethnographic interest. Appeals to those interested in Middle Eastern culture and falconry traditions.",
+    "batch": 2,
+    "pageText": "Arab Sportsmen in Muscat",
+    "stars": 3
+  },
+  {
+    "file": "5949",
+    "subject": "New Zealand Cattle",
+    "description": "Colour photographs of New Zealand beef cattle farming and landscape.",
+    "verdict": "maybe",
+    "notes": "Pleasant New Zealand agricultural scenes with cattle in verdant valleys. Documentary nature limits decorative appeal, but the green landscapes have some visual merit for those with NZ connections.",
+    "batch": 2,
+    "pageText": "Meat for Britain's Tables on the Hoof",
+    "stars": 3
+  },
+  {
+    "file": "5950",
+    "subject": "Maori Culture",
+    "description": "Colour photographs of Maori warriors performing haka and women singers at Whakarewarewa.",
+    "verdict": "yes",
+    "notes": "Vibrant Maori cultural imagery - the fierce energy of the haka and the communal singing capture the spirit of New Zealand's indigenous people. The \"Vikings of the Sunrise\" have a rich tradition of voyaging and adventure. Cultural appeal.",
+    "batch": 2,
+    "pageText": "Maori \"Warriors\" Dance, and the Girls Sing",
+    "stars": 4
+  },
+  {
+    "file": "5951",
+    "subject": "Koala on Dog",
+    "description": "Colour photograph of koala riding on Alsatian dog Lightning, Australian film star.",
+    "verdict": "yes",
+    "notes": "Utterly charming image - a koala (said to be the original Teddy bear model) riding on the back of a friendly Alsatian. This delightful animal friendship photo has universal appeal and would brighten any space.",
+    "batch": 2,
+    "pageText": "Koala Being Taken for a Ride",
+    "stars": 4
+  },
+  {
+    "file": "5952",
+    "subject": "Zulu Craftsmen",
+    "description": "B&W photographs of Zulu sculptors making clay figures and women weaving watertight baskets.",
+    "verdict": "maybe",
+    "notes": "Ethnographic documentation of Zulu craftsmanship - clay modelling and remarkable basket weaving. The traditional skills are fascinating, though B&W format and documentary style limit decorative appeal.",
+    "batch": 2,
+    "pageText": "Artistry of Zulu Sculptor and Basket Makers",
+    "stars": 3
   }
 ]
