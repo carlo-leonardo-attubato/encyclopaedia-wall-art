@@ -493,14 +493,42 @@ function rotateImage(fileId) {
     const item = imageData.find(i => i.file === fileId);
     if (item) {
         item.rotation = ((item.rotation || 0) + 90) % 360;
-        saveCustomRotation(fileId, item.rotation);
+
+        // Save to local server if running locally, otherwise localStorage
+        if (isLocal) {
+            saveToLocalServer(fileId, undefined, item.rotation);
+        } else {
+            saveCustomRotation(fileId, item.rotation);
+            updateExportButton();
+        }
 
         // Update modal image
         document.getElementById('modalImage').style.transform = `rotate(${item.rotation}deg)`;
 
         // Re-render gallery to show rotation
         renderGallery();
-        updateExportButton();
+    }
+}
+
+// Check if running locally
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+// Save to local server (only works when running locally)
+async function saveToLocalServer(fileId, rating, rotation) {
+    if (!isLocal) return false;
+    try {
+        const body = { fileId };
+        if (rating !== undefined) body.rating = rating;
+        if (rotation !== undefined) body.rotation = rotation;
+
+        const response = await fetch('/api/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        });
+        return response.ok;
+    } catch (e) {
+        return false;
     }
 }
 
@@ -512,8 +540,13 @@ function setRating(fileId, newRating) {
         item.stars = newRating;
     }
 
-    // Save to localStorage
-    saveCustomRating(fileId, newRating);
+    // Save to local server if running locally, otherwise localStorage
+    if (isLocal) {
+        saveToLocalServer(fileId, newRating, undefined);
+    } else {
+        saveCustomRating(fileId, newRating);
+        updateExportButton();
+    }
 
     // Re-render gallery
     filterAndSort();
@@ -523,9 +556,6 @@ function setRating(fileId, newRating) {
 
     // Update currentModalIndex to new position after re-sort
     currentModalIndex = filteredData.findIndex(i => i.file === fileId);
-
-    // Show export button
-    updateExportButton();
 }
 
 // Show/hide export button based on custom ratings or rotations
