@@ -1888,5 +1888,55 @@
     "batch": 2,
     "pageText": "Guides: Air Rangers and Sea Rangers",
     "stars": 2
+  },
+  {
+    "file": "5907",
+    "subject": "Victoria Falls",
+    "description": "Colour photograph of the Eastern Cataract of Victoria Falls on the Zambezi River.",
+    "verdict": "yes",
+    "notes": "One of the world's great natural wonders - the \"voice of thunder\" plunging into a narrow gorge. The cascading water, mist, and lush vegetation create a dramatic scene. Excellent for lovers of natural wonders and African landscapes.",
+    "batch": 2,
+    "pageText": "Magnificent Cataracts of the Victoria Falls",
+    "stars": 4
+  },
+  {
+    "file": "5908",
+    "subject": "Queen Victoria Portraits",
+    "description": "B&W portraits of Queen Victoria including Diamond Jubilee and Winterhalter family group.",
+    "verdict": "maybe",
+    "notes": "Historical portraits documenting Queen Victoria through her reign - from young queen to empress. The Winterhalter family portrait is particularly charming. Appeals to royal history enthusiasts and Victoriana collectors, but mainly documentary.",
+    "batch": 2,
+    "pageText": "Victoria: Queen and Empress",
+    "stars": 3
+  },
+  {
+    "file": "5909",
+    "subject": "British Orders and Medals",
+    "description": "Colour plate showing British orders, decorations and medals including Victoria Cross.",
+    "verdict": "maybe",
+    "notes": "Comprehensive display of British honours from the Victoria Cross to Distinguished Flying Medal. The rich colours and heraldic designs have visual appeal. Interests military historians and collectors, but primarily reference material.",
+    "batch": 2,
+    "pageText": "Some British Orders and Decorations",
+    "stars": 3
+  },
+  {
+    "file": "5910",
+    "subject": "Exotic Orchids",
+    "description": "Colour photographs of tropical orchids including Cattleya, Cymbidium, and Lady Slipper varieties.",
+    "verdict": "yes",
+    "notes": "Stunning tropical orchids in delicate pinks, creams, and exotic markings. The variety of forms - from cascading Odontoglossum to sculptural Lady Slipper - showcases nature's creativity. Excellent botanical art for sophisticated spaces.",
+    "batch": 2,
+    "pageText": "Orchids of Exquisite Colouring",
+    "stars": 4
+  },
+  {
+    "file": "5911",
+    "subject": "Lake Lucerne Switzerland",
+    "description": "Colour photograph of Lake Lucerne with Alps including Rigi, Pilatus, and Great Mythen.",
+    "verdict": "yes",
+    "notes": "Postcard-perfect Swiss scenery - the azure lake, snow-capped Alps, and charming red-roofed town create an idyllic alpine composition. The quintessential Swiss landscape that has inspired travelers for centuries. Outstanding wall art.",
+    "batch": 2,
+    "pageText": "Lucerne, One of the Most Lovely of the Swiss Lakes",
+    "stars": 5
   }
 ]
