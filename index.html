@@ -430,12 +430,12 @@ function filterAndSort() {
             return parseInt(a.file) - parseInt(b.file);
         }
         if (currentSort === 'updated') {
-            // Items with lastUpdated come first, sorted by most recent
+            // Items without lastUpdated first, then oldest to newest
             const aDate = a.lastUpdated || '';
             const bDate = b.lastUpdated || '';
-            if (aDate && !bDate) return -1;
-            if (!aDate && bDate) return 1;
-            if (aDate !== bDate) return bDate.localeCompare(aDate);
+            if (!aDate && bDate) return -1;
+            if (aDate && !bDate) return 1;
+            if (aDate !== bDate) return aDate.localeCompare(bDate);
             return parseInt(a.file) - parseInt(b.file);
         }
         return parseInt(a.file) - parseInt(b.file);
