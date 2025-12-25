@@ -2338,5 +2338,55 @@
     "batch": 2,
     "pageText": "Artistry of Zulu Sculptor and Basket Makers",
     "stars": 3
+  },
+  {
+    "file": "5953",
+    "subject": "Hermes of Praxiteles",
+    "description": "Sepia photograph of Praxiteles' marble sculpture of Hermes holding infant Dionysus.",
+    "verdict": "yes",
+    "notes": "One of the greatest masterpieces of ancient Greek sculpture - Hermes dangling grapes for the infant Dionysus. The graceful pose and exquisite craftsmanship represent the pinnacle of classical art. Museum-quality imagery for art lovers.",
+    "batch": 2,
+    "pageText": "Praxiteles' Hermes, a Masterpiece in Marble",
+    "stars": 4
+  },
+  {
+    "file": "5954",
+    "subject": "Discobolus",
+    "description": "Sepia photograph of Myron's Discobolus (Discus Thrower) sculpture showing athlete in action.",
+    "verdict": "yes",
+    "notes": "The iconic Discus Thrower by Myron - one of the most celebrated sculptures capturing human athletic form in motion. The perfect representation of muscular tension and balance. Essential classical art.",
+    "batch": 2,
+    "pageText": "The Athlete in Action as Myron Saw Him",
+    "stars": 4
+  },
+  {
+    "file": "5955",
+    "subject": "Malaria Lifecycle Diagram",
+    "description": "Scientific diagram showing how Anopheles mosquito transmits malaria parasites to humans.",
+    "verdict": "no",
+    "notes": "Technical medical illustration of malaria transmission - mosquito bite, parasite development in blood cells. Scientifically important but purely educational with no decorative appeal whatsoever.",
+    "batch": 2,
+    "pageText": "How the Mosquitoes Spread Malaria",
+    "stars": 2
+  },
+  {
+    "file": "5956",
+    "subject": "Malaya Old and New",
+    "description": "B&W photographs showing traditional Malay life alongside modern development.",
+    "verdict": "no",
+    "notes": "Documentary photographs contrasting traditional and modern Malaya. While historically interesting, the mixed subject matter and B&W format have minimal decorative appeal. Suitable for historical archives.",
+    "batch": 2,
+    "pageText": "Old and New Ways in Malaya",
+    "stars": 2
+  },
+  {
+    "file": "5957",
+    "subject": "African War Dancers and Drums",
+    "description": "B&W photographs of Ruanda-Urundi warriors dancing and African drum communication.",
+    "verdict": "maybe",
+    "notes": "Dramatic images of ceremonial war dancing and the famous African \"bush telegraph\" drum communication. The cultural practices are fascinating, though the colonial-era framing and B&W format limit appeal.",
+    "batch": 2,
+    "pageText": "Plumed War Dancers and the \"Bush Telegraph\"",
+    "stars": 3
   }
 ]
