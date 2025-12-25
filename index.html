@@ -357,6 +357,7 @@
             <div class="modal-info">
                 <h2 class="modal-title" id="modalTitle"></h2>
                 <div class="stars stars-interactive" id="modalStars" style="font-size: 1.3rem; margin: 5px 0 15px;"></div>
+                <button id="rotateBtn" style="background: #333; border: 1px solid #444; color: #ccc; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; margin-bottom: 15px;">↻ Rotate 90°</button>
 
                 <div class="modal-section">
                     <h3>Description</h3>
@@ -460,14 +461,47 @@ function saveCustomRating(fileId, rating) {
     localStorage.setItem('customRatings', JSON.stringify(ratings));
 }
 
-// Apply custom ratings to imageData
+// Load custom rotations from localStorage
+function loadCustomRotations() {
+    const saved = localStorage.getItem('customRotations');
+    return saved ? JSON.parse(saved) : {};
+}
+
+// Save custom rotation to localStorage
+function saveCustomRotation(fileId, rotation) {
+    const rotations = loadCustomRotations();
+    rotations[fileId] = rotation;
+    localStorage.setItem('customRotations', JSON.stringify(rotations));
+}
+
+// Apply custom ratings and rotations to imageData
 function applyCustomRatings() {
     const ratings = loadCustomRatings();
+    const rotations = loadCustomRotations();
     imageData.forEach(item => {
         if (ratings[item.file] !== undefined) {
             item.stars = ratings[item.file];
         }
+        if (rotations[item.file] !== undefined) {
+            item.rotation = rotations[item.file];
+        }
     });
+}
+
+// Rotate image by 90 degrees
+function rotateImage(fileId) {
+    const item = imageData.find(i => i.file === fileId);
+    if (item) {
+        item.rotation = ((item.rotation || 0) + 90) % 360;
+        saveCustomRotation(fileId, item.rotation);
+
+        // Update modal image
+        document.getElementById('modalImage').style.transform = `rotate(${item.rotation}deg)`;
+
+        // Re-render gallery to show rotation
+        renderGallery();
+        updateExportButton();
+    }
 }
 
 // Update star rating for an item
@@ -494,10 +528,11 @@ function setRating(fileId, newRating) {
     updateExportButton();
 }
 
-// Show/hide export button based on custom ratings
+// Show/hide export button based on custom ratings or rotations
 function updateExportButton() {
     const ratings = loadCustomRatings();
-    const hasChanges = Object.keys(ratings).length > 0;
+    const rotations = loadCustomRotations();
+    const hasChanges = Object.keys(ratings).length > 0 || Object.keys(rotations).length > 0;
     document.getElementById('exportBtn').style.display = hasChanges ? 'inline-block' : 'none';
 }
 
@@ -519,7 +554,7 @@ function renderGallery() {
         <div class="card ${item.stars >= 4 ? 'recommended' : ''} ${item.stars === 5 ? 'top-pick' : ''}"
              onclick="openModal(${index})">
             ${item.pageText ? `<div class="card-tooltip">${item.pageText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>` : ''}
-            <img class="card-image" src="images/IMG_${item.file}.jpg" alt="${item.subject}" loading="lazy">
+            <img class="card-image" src="images/IMG_${item.file}.jpg" alt="${item.subject}" loading="lazy" style="${item.rotation ? `transform: rotate(${item.rotation}deg)` : ''}">
             <div class="card-content">
                 <div class="card-title">${item.subject}</div>
                 <div class="stars">${getStars(item.stars)}</div>
@@ -532,11 +567,15 @@ function updateStats() {
     document.getElementById('stats').textContent = `${filteredData.length} images`;
 }
 
+let currentModalFileId = null;
+
 function openModal(index) {
     currentModalIndex = index;
     const item = filteredData[index];
+    currentModalFileId = item.file;
 
     document.getElementById('modalImage').src = `images/IMG_${item.file}.jpg`;
+    document.getElementById('modalImage').style.transform = item.rotation ? `rotate(${item.rotation}deg)` : '';
     document.getElementById('modalTitle').textContent = item.subject;
     document.getElementById('modalStars').innerHTML = getStars(item.stars, item.file);
     document.getElementById('modalDescription').textContent = item.description;
@@ -619,6 +658,12 @@ document.getElementById('modal').addEventListener('click', (e) => {
 });
 
 document.getElementById('exportBtn').addEventListener('click', exportData);
+
+document.getElementById('rotateBtn').addEventListener('click', () => {
+    if (currentModalFileId) {
+        rotateImage(currentModalFileId);
+    }
+});
 
 // Initialize - load data from JSON
 fetch('data.json')
