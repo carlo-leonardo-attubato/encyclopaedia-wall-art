@@ -1938,5 +1938,55 @@
     "batch": 2,
     "pageText": "Lucerne, One of the Most Lovely of the Swiss Lakes",
     "stars": 5
+  },
+  {
+    "file": "5912",
+    "subject": "Standley Chasm Australia",
+    "description": "Colour photograph of Standley Chasm in MacDonnell Ranges near Alice Springs with towering red walls.",
+    "verdict": "yes",
+    "notes": "Dramatic geological wonder - a narrow ravine with 200-foot red rock walls glowing in the sun. The warm ochre and rust colours of the Australian outback create a striking natural artwork. Excellent for those fascinated by geology and wild landscapes.",
+    "batch": 2,
+    "pageText": "Colour of the Australian Commonwealth",
+    "stars": 4
+  },
+  {
+    "file": "5913",
+    "subject": "Melbourne and Adelaide",
+    "description": "Colour photographs of Melbourne Parliament House and Adelaide North Terrace.",
+    "verdict": "maybe",
+    "notes": "Documentary views of two Australian state capitals - Melbourne's grand Parliament House and Adelaide's tree-lined boulevard. Historically interesting for those with Australian connections, but mainly architectural documentation.",
+    "batch": 2,
+    "pageText": "Two State Capitals of Australia",
+    "stars": 3
+  },
+  {
+    "file": "5914",
+    "subject": "Sydney Harbour Bridge",
+    "description": "Colour photograph of Sydney Harbour Bridge from North Shore with harbour view.",
+    "verdict": "yes",
+    "notes": "Iconic Australian landmark - the majestic Harbour Bridge spanning the blue waters of Sydney Harbour. One of the world's most recognizable structures and a symbol of modern Australia. Excellent for Australian enthusiasts and architecture lovers.",
+    "batch": 2,
+    "pageText": "Sydney Bridge and Harbour from the North Shore",
+    "stars": 4
+  },
+  {
+    "file": "5915",
+    "subject": "Midnight Sun Norway",
+    "description": "Colour photograph of midnight sun phenomenon in northern Norway with sunset colours.",
+    "verdict": "yes",
+    "notes": "Ethereal capture of the midnight sun - golden light on water with dramatic silhouettes and the surreal atmosphere of perpetual daylight. The warm colours and reflections create a dreamlike, meditative quality. Outstanding atmospheric art.",
+    "batch": 2,
+    "pageText": "Where the Sun Shines Night and Day at Midsummer",
+    "stars": 5
+  },
+  {
+    "file": "5916",
+    "subject": "New Forest Woodland",
+    "description": "B&W photograph of sunlight filtering through beech and ash trees in the New Forest.",
+    "verdict": "maybe",
+    "notes": "Peaceful English woodland scene with dappled sunlight creating patterns on the forest floor. The interplay of light and shadow has artistic merit, though the B&W format limits decorative impact. Appeals to nature lovers and those who appreciate quiet beauty.",
+    "batch": 2,
+    "pageText": "Sunlight and Shadow in an English Wood",
+    "stars": 3
   }
 ]
