@@ -503,6 +503,9 @@ function rotateImage(fileId) {
     const item = imageData.find(i => i.file === fileId);
     if (item) {
         item.rotation = ((item.rotation || 0) + 90) % 360;
+        if (isLocal) {
+            item.lastUpdated = new Date().toISOString();
+        }
 
         // Save to local server if running locally, otherwise localStorage
         if (isLocal) {
@@ -542,12 +545,15 @@ async function saveToLocalServer(fileId, rating, rotation) {
     }
 }
 
-// Update star rating for an item
+// Update star rating for an item (always saves, even if same value - to update timestamp)
 function setRating(fileId, newRating) {
     // Update in imageData
     const item = imageData.find(i => i.file === fileId);
     if (item) {
         item.stars = newRating;
+        if (isLocal) {
+            item.lastUpdated = new Date().toISOString();
+        }
     }
 
     // Save to local server if running locally, otherwise localStorage
