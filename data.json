@@ -1988,5 +1988,55 @@
     "batch": 2,
     "pageText": "Sunlight and Shadow in an English Wood",
     "stars": 3
+  },
+  {
+    "file": "5917",
+    "subject": "Ancient Scots Pines",
+    "description": "B&W photograph of grand old Scots pines with umbrella-like canopies and grazing sheep.",
+    "verdict": "maybe",
+    "notes": "Atmospheric photograph of ancient Scots pines, favourites of artists with their gnarled branches and flat tops. The pastoral scene with sheep adds bucolic charm. B&W limits decorative impact but appeals to those who love traditional English landscape.",
+    "batch": 2,
+    "pageText": "The Grandeur of a Group of Ancient Pines",
+    "stars": 3
+  },
+  {
+    "file": "5918",
+    "subject": "Wellingtonia Trees",
+    "description": "B&W photograph of three Giant Sequoias (Wellingtonia) in an English park.",
+    "verdict": "maybe",
+    "notes": "Impressive specimens of California's Giant Sequoia thriving in Britain since Victorian times. The towering conical forms are striking, though the B&W format reduces visual impact. Appeals to arborists and those interested in botanical history.",
+    "batch": 2,
+    "pageText": "Splendid Trees of Britain's Countryside",
+    "stars": 3
+  },
+  {
+    "file": "5919",
+    "subject": "Horses in Sport and Work",
+    "description": "Colour plate with thoroughbred stallion and vignettes of horses in various equestrian activities.",
+    "verdict": "yes",
+    "notes": "Charming equestrian illustration celebrating the horse in all its roles - racing, hunting, polo, dressage, farm work. The central stallion is magnificently rendered. Perfect for horse lovers, country homes, and equestrian enthusiasts.",
+    "batch": 2,
+    "pageText": "The Horse: Man's Friend in Sport and Work",
+    "stars": 4
+  },
+  {
+    "file": "5920",
+    "subject": "Horse-Chestnuts in London",
+    "description": "Colour photograph of horse-chestnut trees in full bloom with white flower spikes in a London park.",
+    "verdict": "yes",
+    "notes": "Quintessentially English scene - magnificent horse-chestnuts covered in their distinctive candle-like white flowers. The green parkland and blue sky create a fresh, uplifting image. Perfect for those who love London's green spaces and spring blooms.",
+    "batch": 2,
+    "pageText": "Horse-Chestnuts in Full Bloom in London",
+    "stars": 4
+  },
+  {
+    "file": "5921",
+    "subject": "Dragonflies and Water Lilies",
+    "description": "Colour illustration of Emperor dragonflies hovering over pond with white water lilies.",
+    "verdict": "yes",
+    "notes": "Exquisite natural history illustration - iridescent dragonflies with gauzy wings among pristine white water lilies. The delicate detail and fresh colours capture a perfect summer pond moment. Outstanding botanical and entomological art.",
+    "batch": 2,
+    "pageText": "Dragon-Flies Poised on Gauzy Wings",
+    "stars": 5
   }
 ]
