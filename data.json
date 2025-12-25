@@ -2538,5 +2538,55 @@
     "batch": 2,
     "pageText": "Members of the Animal Kingdom",
     "stars": 2
+  },
+  {
+    "file": "5973",
+    "subject": "Child Film Stars",
+    "description": "B&W photographs from films Raising a Riot and Smiley featuring child actors.",
+    "verdict": "no",
+    "notes": "Documentary film stills featuring child actors from 1950s British cinema. While nostalgic for film buffs, the dated subject matter and B&W format have limited decorative appeal.",
+    "batch": 2,
+    "pageText": "Children Stealing the Picture",
+    "stars": 2
+  },
+  {
+    "file": "5974",
+    "subject": "Mammal Groups",
+    "description": "B&W photographs showing representatives of four chief mammal groups.",
+    "verdict": "no",
+    "notes": "Educational zoology reference showing mammal classification. The individual animal portraits are nice but the reference format lacks decorative appeal. Suitable for educational contexts only.",
+    "batch": 2,
+    "pageText": "Some Members of the Four Chief Groups of Mammals",
+    "stars": 2
+  },
+  {
+    "file": "5975",
+    "subject": "Motorcycle History",
+    "description": "B&W plate showing motorcycle development from 1885 Daimler to 1951 Norton.",
+    "verdict": "maybe",
+    "notes": "Fascinating evolution of motorcycle design over 70 years. The variety of machines from wooden-wheeled pioneers to sleek Nortons appeals to transport enthusiasts and vintage motorcycle fans.",
+    "batch": 2,
+    "pageText": "Development of the Motor-Cycle",
+    "stars": 3
+  },
+  {
+    "file": "5976",
+    "subject": "Firearm History",
+    "description": "B&W illustrated plate showing 500 years of firearms from hand-cannon to breech-loader.",
+    "verdict": "maybe",
+    "notes": "Comprehensive survey of firearm evolution - hand cannons, matchlocks, flintlocks, percussion rifles, and revolvers. The detailed illustrations appeal to military historians and weapons collectors.",
+    "batch": 2,
+    "pageText": "From Hand-Cannon to the Breech-Loader",
+    "stars": 3
+  },
+  {
+    "file": "5977",
+    "subject": "Heraldic Shields",
+    "description": "Colour plate of heraldic achievements including BOAC, Oxford colleges, and family arms.",
+    "verdict": "yes",
+    "notes": "Colourful heraldic display - bold shields of Oxford colleges, noble families, and corporations. The vibrant colours and traditional designs have genuine decorative appeal for those interested in British heritage and heraldry.",
+    "batch": 2,
+    "pageText": "Heraldic Achievements and Shields",
+    "stars": 4
   }
 ]
