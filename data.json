@@ -2188,5 +2188,55 @@
     "batch": 2,
     "pageText": "Work of the Beaters in Paper-Making",
     "stars": 2
+  },
+  {
+    "file": "5938",
+    "subject": "WRAF Packing Parachutes",
+    "description": "Colour photograph of Women's Royal Air Force packing coloured parachutes for airborne brigade.",
+    "verdict": "maybe",
+    "notes": "Striking image of colourful parachutes being packed by WRAF personnel. The rainbow of colours against the military setting creates visual interest. Appeals to aviation and military history enthusiasts, with some artistic merit from the colour arrangement.",
+    "batch": 2,
+    "pageText": "Lives and Supplies Depend on Parachutes",
+    "stars": 3
+  },
+  {
+    "file": "5939",
+    "subject": "Central Asian Scenes",
+    "description": "B&W photographs of Mongolian yurt, Bactrian camels, Tamerlane's tomb, and traditional dress.",
+    "verdict": "maybe",
+    "notes": "Exotic Central Asian imagery - the Silk Road world of yurts, camels, and Tamerlane's Samarkand. The ethnographic content has romantic appeal for those interested in travel and cultural history, though B&W limits decorative impact.",
+    "batch": 2,
+    "pageText": "Descendants of the Conquering Hordes",
+    "stars": 3
+  },
+  {
+    "file": "5940",
+    "subject": "Mouse-Eared Bat",
+    "description": "B&W photograph of mouse-eared bat in flight, discovered in Britain in 1957.",
+    "verdict": "maybe",
+    "notes": "Remarkable wildlife photograph capturing a bat in flight with wings fully extended. The dramatic black background and scientific interest make this appealing to naturalists, though the subject may not suit all tastes.",
+    "batch": 2,
+    "pageText": "The Mouse-Eared Bat in England",
+    "stars": 3
+  },
+  {
+    "file": "5941",
+    "subject": "Antarctic Icebergs and Penguins",
+    "description": "B&W photographs of massive Antarctic iceberg and penguins on rocky shore.",
+    "verdict": "yes",
+    "notes": "Evocative Antarctic imagery - a castle-like iceberg and penguins in their harsh environment. The stark beauty of polar landscapes has timeless appeal. Good for those fascinated by exploration and wild places.",
+    "batch": 2,
+    "pageText": "The Foreigner and the Natives",
+    "stars": 4
+  },
+  {
+    "file": "5942",
+    "subject": "Terra Nova in Antarctica",
+    "description": "B&W photograph of Scott's ship Terra Nova anchored at Antarctic ice during 1910-13 expedition.",
+    "verdict": "yes",
+    "notes": "Iconic image from the Heroic Age of Antarctic exploration - Scott's Terra Nova dwarfed by towering icebergs. The contrast between fragile ship and overwhelming ice captures the drama of polar exploration. Historically significant.",
+    "batch": 2,
+    "pageText": "Man Invades the Frozen Wastes",
+    "stars": 4
   }
 ]
