@@ -336,6 +336,7 @@
         <select id="sortOrder">
             <option value="stars">By Rating</option>
             <option value="file">By File #</option>
+            <option value="updated">By Last Updated</option>
         </select>
         <input type="text" id="searchBox" placeholder="Search...">
         <button id="exportBtn" style="display: none; background: #4a7c59; border: none; color: #fff; padding: 5px 12px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Export Changes</button>
@@ -426,6 +427,15 @@ function filterAndSort() {
     filteredData.sort((a, b) => {
         if (currentSort === 'stars') {
             if (a.stars !== b.stars) return b.stars - a.stars;
+            return parseInt(a.file) - parseInt(b.file);
+        }
+        if (currentSort === 'updated') {
+            // Items with lastUpdated come first, sorted by most recent
+            const aDate = a.lastUpdated || '';
+            const bDate = b.lastUpdated || '';
+            if (aDate && !bDate) return -1;
+            if (!aDate && bDate) return 1;
+            if (aDate !== bDate) return bDate.localeCompare(aDate);
             return parseInt(a.file) - parseInt(b.file);
         }
         return parseInt(a.file) - parseInt(b.file);
