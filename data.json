@@ -2388,5 +2388,55 @@
     "batch": 2,
     "pageText": "Plumed War Dancers and the \"Bush Telegraph\"",
     "stars": 3
+  },
+  {
+    "file": "5958",
+    "subject": "African Cocoa Harvest",
+    "description": "B&W photograph of cocoa pod harvesting in Ghana and Nigeria showing beans extraction.",
+    "verdict": "no",
+    "notes": "Documentary agricultural photography of cocoa harvesting. The process of extracting beans for chocolate is interesting but purely functional imagery with no decorative appeal.",
+    "batch": 2,
+    "pageText": "Life and Landscape in Africa",
+    "stars": 2
+  },
+  {
+    "file": "5959",
+    "subject": "Solar Prominence Eclipse",
+    "description": "Colour photograph of sun's flaming prominence during total eclipse showing massive solar flare.",
+    "verdict": "yes",
+    "notes": "Spectacular astronomical imagery - a massive solar prominence of luminous gases erupting during an eclipse. The fiery orange against deep blue space is dramatic and awe-inspiring. The tiny Earth shown to scale emphasizes the sun's immensity. Outstanding cosmic art.",
+    "batch": 2,
+    "pageText": "Sun's Flaming Prominence During a Total Eclipse",
+    "stars": 5
+  },
+  {
+    "file": "5960",
+    "subject": "Cape Canaveral Rocket",
+    "description": "Colour photograph of space probe on launch pad at Cape Canaveral with support vehicles.",
+    "verdict": "yes",
+    "notes": "Historic Space Age imagery - a rocket poised for launch at Cape Canaveral with period support vehicles. The Pioneer program marked humanity's first steps into deep space. Appeals to space history enthusiasts and those nostalgic for the early Space Age.",
+    "batch": 2,
+    "pageText": "American \"Space Probe\" at Rest",
+    "stars": 4
+  },
+  {
+    "file": "5961",
+    "subject": "Pavement Artist Photography",
+    "description": "B&W photograph of young pavement artist creating chalk drawings, demonstrating contre-jour technique.",
+    "verdict": "maybe",
+    "notes": "Artistic photograph demonstrating back-lighting technique. The shadows and silhouettes create an interesting composition. More of a photography tutorial than decorative art, but has some artistic merit.",
+    "batch": 2,
+    "pageText": "Picture Taken Against the Light",
+    "stars": 3
+  },
+  {
+    "file": "5962",
+    "subject": "Swiss Alps Solitude",
+    "description": "B&W photographs of Finsteraarhorn glacier and mountaineer on Jungfrau above the clouds.",
+    "verdict": "yes",
+    "notes": "Majestic Alpine imagery - the Fiescher glacier winding down from Finsteraarhorn, and a lone climber above a sea of clouds on the Jungfrau. The dramatic B&W captures the sublime grandeur of high mountains. Appeals to mountaineers and romantics alike.",
+    "batch": 2,
+    "pageText": "The Bliss of Solitude",
+    "stars": 4
   }
 ]
