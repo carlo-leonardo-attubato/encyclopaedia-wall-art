@@ -2688,5 +2688,55 @@
     "batch": 2,
     "pageText": "In the Dutch Bulb Fields South of Haarlem",
     "stars": 4
+  },
+  {
+    "file": "5989",
+    "subject": "Medieval Tournament",
+    "description": "Colour plate of medieval manuscript illuminations showing knights jousting at tournaments.",
+    "verdict": "yes",
+    "notes": "Magnificent medieval manuscript art depicting chivalric tournaments - knights on horseback jousting before noble spectators. The rich colours and intricate detail capture the pageantry of the age. Appeals to medieval history enthusiasts.",
+    "batch": 2,
+    "pageText": "Knights Tilting in the Tournament",
+    "stars": 4
+  },
+  {
+    "file": "5990",
+    "subject": "Swimming Techniques",
+    "description": "B&W instructional diagrams showing swimming strokes and diving positions.",
+    "verdict": "no",
+    "notes": "Technical instructional diagrams breaking down swimming strokes - breast stroke, crawl, butterfly, and diving. Purely educational reference with no decorative appeal.",
+    "batch": 2,
+    "pageText": "Picture-Lessons in Swimming and Diving",
+    "stars": 2
+  },
+  {
+    "file": "5991",
+    "subject": "Aurora Borealis Diagram",
+    "description": "B&W scientific illustration showing how solar particles cause Northern Lights.",
+    "verdict": "maybe",
+    "notes": "Dramatic scientific illustration showing Earth receiving solar particles that create the aurora. The artistic rendering of space has visual appeal beyond its educational purpose. The \"Merry Dancers\" explanation adds charm.",
+    "batch": 2,
+    "pageText": "How the Sun Causes the Aurora Borealis",
+    "stars": 3
+  },
+  {
+    "file": "5992",
+    "subject": "English and French Porcelain",
+    "description": "Colour plate showing fine porcelain from Bow, Chelsea, Worcester, and Sèvres.",
+    "verdict": "yes",
+    "notes": "Elegant display of 18th-century porcelain - delicate Bow mugs, Chelsea plates, rose pompadour Sèvres. The soft pinks, blues, and gilding showcase the finest European ceramic arts. Appeals to antique collectors and decorative arts enthusiasts.",
+    "batch": 2,
+    "pageText": "Pieces of English and French Porcelain",
+    "stars": 4
+  },
+  {
+    "file": "5993",
+    "subject": "Massed Lupins",
+    "description": "Colour photograph of spectacular lupin beds in reds, pinks, and yellows.",
+    "verdict": "yes",
+    "notes": "Breathtaking garden spectacle - rows of Russell lupins in blazing reds, pinks, and golds creating a dazzling tapestry of colour. The bold patterns and vibrant hues make this outstanding horticultural art.",
+    "batch": 2,
+    "pageText": "Dazzling Pattern of Massed Lupins",
+    "stars": 5
   }
 ]
