@@ -2588,5 +2588,55 @@
     "batch": 2,
     "pageText": "Heraldic Achievements and Shields",
     "stars": 4
+  },
+  {
+    "file": "5978",
+    "subject": "Animal Feet Adaptations",
+    "description": "B&W illustrated grid showing feet adapted for land and water across many species.",
+    "verdict": "no",
+    "notes": "Educational zoology reference showing foot adaptations across the animal kingdom. While scientifically interesting, the reference grid format has no decorative appeal.",
+    "batch": 2,
+    "pageText": "Feet for Life on Land and in Water",
+    "stars": 2
+  },
+  {
+    "file": "5979",
+    "subject": "Queen Mary's Dolls House",
+    "description": "B&W photographs of Queen Mary's famous miniature house at Windsor Castle designed by Lutyens.",
+    "verdict": "maybe",
+    "notes": "Fascinating documentation of an extraordinary miniature masterpiece - every detail perfect at 1:12 scale. The craftsmanship is remarkable. Appeals to those interested in royal history and miniature arts.",
+    "batch": 2,
+    "pageText": "A Doll's House Fit for a Queen",
+    "stars": 3
+  },
+  {
+    "file": "5980",
+    "subject": "Seaweed Botanical Plate",
+    "description": "Colour botanical illustration of various seaweeds and marine algae.",
+    "verdict": "yes",
+    "notes": "Elegant botanical illustration of marine algae in beautiful greens, browns, reds, and ambers. The delicate forms and subtle colours make this refined natural history art suitable for coastal or nature-themed spaces.",
+    "batch": 2,
+    "pageText": "Algae: Simplest of All Forms of Plant Life",
+    "stars": 4
+  },
+  {
+    "file": "5981",
+    "subject": "Brittany Rockpool Seaweeds",
+    "description": "Colour photograph of colourful seaweeds among rocks on Brittany coast.",
+    "verdict": "yes",
+    "notes": "Stunning natural abstract - a kaleidoscope of seaweed colours in a Breton rockpool. The greens, purples, yellows, and reds create an almost painterly composition. Outstanding natural art.",
+    "batch": 2,
+    "pageText": "Seaweeds Among Rocks on the Cliffs of the North Coast of Brittany",
+    "stars": 5
+  },
+  {
+    "file": "5982",
+    "subject": "Tropical Reef Fish",
+    "description": "Colour underwater photographs of tropical butterfly fish and Moorish idol among coral.",
+    "verdict": "yes",
+    "notes": "Gorgeous underwater photography from tropical reefs - vivid butterfly fish and elegant Moorish idols among colourful coral. The brilliant colours and exotic subjects make this excellent decorative art for any space.",
+    "batch": 2,
+    "pageText": "Colourful Marine Life of the Tropics",
+    "stars": 5
   }
 ]
