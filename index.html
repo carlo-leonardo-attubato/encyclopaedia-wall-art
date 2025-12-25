@@ -339,7 +339,6 @@
             <option value="updated">By Last Updated</option>
         </select>
         <input type="text" id="searchBox" placeholder="Search...">
-        <button id="exportBtn" style="display: none; background: #4a7c59; border: none; color: #fff; padding: 5px 12px; border-radius: 15px; cursor: pointer; font-size: 0.85rem;">Export Changes</button>
     </div>
 
     <div class="stats" id="stats"></div>
@@ -512,7 +511,6 @@ function rotateImage(fileId) {
             saveToLocalServer(fileId, undefined, item.rotation);
         } else {
             saveCustomRotation(fileId, item.rotation);
-            updateExportButton();
         }
 
         // Update modal image
@@ -561,7 +559,6 @@ function setRating(fileId, newRating) {
         saveToLocalServer(fileId, newRating, undefined);
     } else {
         saveCustomRating(fileId, newRating);
-        updateExportButton();
     }
 
     // Re-render gallery
@@ -574,25 +571,6 @@ function setRating(fileId, newRating) {
     currentModalIndex = filteredData.findIndex(i => i.file === fileId);
 }
 
-// Show/hide export button based on custom ratings or rotations
-function updateExportButton() {
-    const ratings = loadCustomRatings();
-    const rotations = loadCustomRotations();
-    const hasChanges = Object.keys(ratings).length > 0 || Object.keys(rotations).length > 0;
-    document.getElementById('exportBtn').style.display = hasChanges ? 'inline-block' : 'none';
-}
-
-// Export updated data.json
-function exportData() {
-    const dataStr = JSON.stringify(imageData, null, 2);
-    const blob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'data.json';
-    a.click();
-    URL.revokeObjectURL(url);
-}
 
 function renderGallery() {
     const gallery = document.getElementById('gallery');
@@ -703,8 +681,6 @@ document.getElementById('modal').addEventListener('click', (e) => {
     if (e.target.id === 'modal') closeModal();
 });
 
-document.getElementById('exportBtn').addEventListener('click', exportData);
-
 document.getElementById('rotateBtn').addEventListener('click', () => {
     if (currentModalFileId) {
         rotateImage(currentModalFileId);
@@ -718,7 +694,6 @@ fetch('data.json')
         imageData = data;
         applyCustomRatings(); // Apply any saved custom ratings
         filterAndSort();
-        updateExportButton(); // Show export button if there are pending changes
     })
     .catch(error => {
         console.error('Error loading data:', error);
