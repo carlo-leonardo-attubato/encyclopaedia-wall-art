@@ -478,7 +478,7 @@ function setRating(fileId, newRating) {
         item.stars = newRating;
     }
 
-    // Save to localStorage as backup
+    // Save to localStorage
     saveCustomRating(fileId, newRating);
 
     // Re-render gallery
@@ -490,33 +490,8 @@ function setRating(fileId, newRating) {
     // Update currentModalIndex to new position after re-sort
     currentModalIndex = filteredData.findIndex(i => i.file === fileId);
 
-    // Save to server (updates data.json permanently)
-    saveToServer(fileId, newRating);
-}
-
-// Save rating to server (commits to GitHub)
-async function saveToServer(fileId, rating) {
-    try {
-        const response = await fetch('/api/update-rating', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ fileId, rating })
-        });
-
-        if (response.ok) {
-            // Clear from localStorage since it's now saved permanently
-            const ratings = loadCustomRatings();
-            delete ratings[fileId];
-            localStorage.setItem('customRatings', JSON.stringify(ratings));
-            updateExportButton();
-            console.log(`Saved rating for ${fileId}: ${rating} stars`);
-        } else {
-            console.error('Failed to save rating to server');
-        }
-    } catch (error) {
-        console.error('Error saving to server:', error);
-        // Rating is still in localStorage as backup
-    }
+    // Show export button
+    updateExportButton();
 }
 
 // Show/hide export button based on custom ratings
