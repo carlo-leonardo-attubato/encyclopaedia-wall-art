@@ -2088,5 +2088,55 @@
     "batch": 2,
     "pageText": "Delicacy of Taste in British Fan Design",
     "stars": 3
+  },
+  {
+    "file": "5927",
+    "subject": "Canadian Rockies and Mountie",
+    "description": "Colour photographs of transcontinental train in Rocky Mountains and Royal Canadian Mounted Police officer.",
+    "verdict": "yes",
+    "notes": "Classic Canadian imagery - the transcontinental train winding through majestic Rocky Mountain scenery, and an iconic Mountie in brilliant scarlet. Both images capture the romance of Canada. Perfect for Canadiana enthusiasts.",
+    "batch": 2,
+    "pageText": "Contrasts in Canada's Vast Outdoors",
+    "stars": 4
+  },
+  {
+    "file": "5928",
+    "subject": "Ottawa Parliament and Wilderness",
+    "description": "Colour photographs of Ottawa Parliament House and wilderness fishing north of Great Lakes.",
+    "verdict": "maybe",
+    "notes": "Contrasting views of Canadian life - the stately Parliament buildings in Ottawa and wilderness fishing in the northern lakes. Documentary in nature but captures the urban/wilderness duality of Canadian identity.",
+    "batch": 2,
+    "pageText": "In the City and Away from It All",
+    "stars": 3
+  },
+  {
+    "file": "5929",
+    "subject": "Coal Mine Diagram",
+    "description": "B&W technical cross-section diagram of a typical coal mine showing shafts and tunnels.",
+    "verdict": "no",
+    "notes": "Technical educational diagram showing coal mine infrastructure - surface buildings, shafts, underground workings. Purely functional illustration with no decorative appeal. Suitable only for industrial history contexts.",
+    "batch": 2,
+    "pageText": "Above and Within a Typical Coal Mine",
+    "stars": 2
+  },
+  {
+    "file": "5930",
+    "subject": "British Road Signs",
+    "description": "Colour reference chart of British road signs including HALT, NO ENTRY, speed limits, and motorway signs.",
+    "verdict": "no",
+    "notes": "Reference chart of British road signage from the motorway era. While historically interesting, this is purely functional documentation with no decorative value. Not suitable for wall art.",
+    "batch": 2,
+    "pageText": "Road Signs Used in Britain",
+    "stars": 2
+  },
+  {
+    "file": "5931",
+    "subject": "Physical Map of England",
+    "description": "Colour physical map showing England's mountain ranges, rivers, and coastal features with elevation colours.",
+    "verdict": "maybe",
+    "notes": "Attractive vintage cartography showing England's topography in warm colours. The Pennines, moors, and downs are clearly depicted. Has some decorative appeal for geography enthusiasts and those who appreciate vintage maps.",
+    "batch": 2,
+    "pageText": "Physical Map of England",
+    "stars": 3
   }
 ]
