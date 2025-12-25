@@ -2638,5 +2638,55 @@
     "batch": 2,
     "pageText": "Colourful Marine Life of the Tropics",
     "stars": 5
+  },
+  {
+    "file": "5983",
+    "subject": "Chrysanthemum Varieties",
+    "description": "Colour botanical plate showing many chrysanthemum varieties from the Far East.",
+    "verdict": "yes",
+    "notes": "Magnificent display of chrysanthemum diversity - Japanese exhibition types, incurved blooms, shaggy varieties in pinks, reds, yellows, whites, and oranges. The rich colours and variety of forms make this outstanding botanical art.",
+    "batch": 2,
+    "pageText": "Chrysanthemums of Many Kinds",
+    "stars": 5
+  },
+  {
+    "file": "5984",
+    "subject": "Niagara Falls",
+    "description": "Colour photographs of Niagara Falls showing American Falls with pleasure steamer for scale.",
+    "verdict": "yes",
+    "notes": "One of North America's great natural wonders - the thundering cascades of Niagara in vivid colour. The pleasure steamer provides dramatic scale. Classic travel imagery that appeals to lovers of natural wonders.",
+    "batch": 2,
+    "pageText": "Thunderous Cascades of the Niagara Falls",
+    "stars": 4
+  },
+  {
+    "file": "5985",
+    "subject": "New Zealand Southern Alps",
+    "description": "Colour photograph of Southern Alps from Arthur's Point, Otago with golden autumn poplars.",
+    "verdict": "yes",
+    "notes": "Breathtaking New Zealand scenery - golden autumn poplars against the snow-capped Southern Alps. Comparable to Switzerland in grandeur. The warm colours create a magical atmosphere. Outstanding landscape photography.",
+    "batch": 2,
+    "pageText": "The New Zealand Scene in Colour",
+    "stars": 5
+  },
+  {
+    "file": "5986",
+    "subject": "Dog Breeds Illustrated",
+    "description": "Colour plate illustrating various dog breeds from setters to Great Danes.",
+    "verdict": "yes",
+    "notes": "Charming illustrations of beloved dog breeds - from elegant Borzois to sturdy Mastiffs, playful Beagles to regal Great Danes. Perfect for dog lovers and anyone who appreciates traditional animal illustration.",
+    "batch": 2,
+    "pageText": "Dogs of Farm, Field, and Home",
+    "stars": 4
+  },
+  {
+    "file": "5987",
+    "subject": "Dutch Bulb Fields",
+    "description": "Colour photograph of woman in red dress amid hyacinth fields near Haarlem.",
+    "verdict": "yes",
+    "notes": "Quintessentially Dutch - a young woman gathering hyacinths in the famous bulb fields near Haarlem. The red dress against blue and pink flowers creates a joyful spring image. Charming traditional Dutch scene.",
+    "batch": 2,
+    "pageText": "In the Dutch Bulb Fields South of Haarlem",
+    "stars": 4
   }
 ]
