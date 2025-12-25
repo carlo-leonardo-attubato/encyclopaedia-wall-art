@@ -2488,5 +2488,55 @@
     "batch": 2,
     "pageText": "Strange Beasts and Birds of Australia",
     "stars": 3
+  },
+  {
+    "file": "5968",
+    "subject": "Historical Beard Styles",
+    "description": "B&W plate showing grid of distinctive beard styles through history.",
+    "verdict": "no",
+    "notes": "Curious collection of historical beards from Maximilian to W.G. Grace. More of an amusing reference than decorative art. The varied faces and styles have novelty value but limited wall art appeal.",
+    "batch": 2,
+    "pageText": "Beards Distinctive and Beards Dreadful",
+    "stars": 2
+  },
+  {
+    "file": "5969",
+    "subject": "English Country Lane Winter",
+    "description": "B&W photograph of bare elm trees arching over a winding English lane.",
+    "verdict": "yes",
+    "notes": "Evocative English countryside - bare winter elms creating a natural cathedral over a winding lane. \"When exiles think of England\" this is what they remember. Nostalgic and atmospheric, perfect for Anglophiles.",
+    "batch": 2,
+    "pageText": "Bared Elms Leaning Over a Winding English Lane",
+    "stars": 4
+  },
+  {
+    "file": "5970",
+    "subject": "Angkor Wat Cambodia",
+    "description": "B&W photographs of Angkor ruins including Angkor Vat temple and Khmer dancing girls.",
+    "verdict": "yes",
+    "notes": "The magnificent lost city of the Khmer empire, hidden in jungle for centuries. Angkor Vat's towers rising above its moat represent one of humanity's greatest architectural achievements. Appeals to history buffs and travel enthusiasts.",
+    "batch": 2,
+    "pageText": "Wonder of Cambodia Rescued from the Jungle",
+    "stars": 4
+  },
+  {
+    "file": "5971",
+    "subject": "Doge of Venice Portrait",
+    "description": "B&W reproduction of Giovanni Bellini's Renaissance portrait of a Venetian Doge.",
+    "verdict": "yes",
+    "notes": "Masterful Renaissance portraiture by Bellini - the Doge's dignified face beneath the ceremonial corno cap exudes authority and wisdom. A fine example of Venetian painting that would grace any classical interior.",
+    "batch": 2,
+    "pageText": "Dignity in the Portrait of a Doge of Venice",
+    "stars": 4
+  },
+  {
+    "file": "5972",
+    "subject": "Animal Kingdom Classification",
+    "description": "B&W illustrated grid showing representatives of major animal groups from protozoa to mammals.",
+    "verdict": "no",
+    "notes": "Educational zoology reference showing animal kingdom classification. While the illustrations are competent, this is purely educational material with no decorative appeal.",
+    "batch": 2,
+    "pageText": "Members of the Animal Kingdom",
+    "stars": 2
   }
 ]
