@@ -2788,5 +2788,55 @@
     "batch": 2,
     "pageText": "Famous Polar Bear Cub of the London Zoo",
     "stars": 3
+  },
+  {
+    "file": "5999",
+    "subject": "Golf Strokes",
+    "description": "Instructional colour illustration showing four golf stroke techniques: addressing the ball, at the top of the swing, immediately after impact, and the follow through.",
+    "verdict": "no",
+    "notes": "Technical instructional diagram for golf. While useful for golfers learning technique, the didactic presentation with four sequential poses is purely educational rather than decorative. Limited wall art appeal outside golf instruction contexts.",
+    "batch": 2,
+    "pageText": "The Correct Swinging of a Golf Club",
+    "stars": 2
+  },
+  {
+    "file": "6001",
+    "subject": "The Blue Boy by Gainsborough",
+    "description": "Famous portrait painting by Thomas Gainsborough showing a young aristocrat in elegant blue satin costume, painted around 1770.",
+    "verdict": "yes",
+    "notes": "One of the most celebrated portraits in art history. Gainsborough's masterpiece shows exquisite handling of the blue satin costume against a romantic landscape backdrop. A timeless classic that has graced countless homes as quality art reproduction. Museum-quality subject matter.",
+    "batch": 2,
+    "pageText": "The Blue Boy",
+    "stars": 4
+  },
+  {
+    "file": "6002",
+    "subject": "British and German Military Aircraft",
+    "description": "Colour illustration showing silhouettes and profiles of British and German military aircraft from World War II era, including fighters and bombers.",
+    "verdict": "maybe",
+    "notes": "Technical military aviation reference plate showing aircraft identification profiles. Appeals to aviation enthusiasts and military history buffs. The clean graphic style has some visual appeal, though primarily serves as historical documentation rather than decoration.",
+    "batch": 2,
+    "pageText": "British and German Aeroplanes",
+    "stars": 3
+  },
+  {
+    "file": "6003",
+    "subject": "Montanes Wood Sculpture of St John",
+    "description": "Sepia photograph of a carved wooden sculpture of St. John by the Spanish master sculptor Montanes, demonstrating remarkable effects in wood usually sought in stone.",
+    "verdict": "no",
+    "notes": "Documentary photograph of religious sculpture. While the craftsmanship is remarkable, the sepia documentary photograph of a sculptural work has limited decorative appeal. More suited to art history reference than wall display.",
+    "batch": 2,
+    "pageText": "A Montanes Masterpiece Carved from Wood",
+    "stars": 2
+  },
+  {
+    "file": "6004",
+    "subject": "York Minster West Front",
+    "description": "Black and white photograph showing the magnificent Gothic west facade of York Minster, England's largest medieval cathedral with towers rising to 198 feet.",
+    "verdict": "maybe",
+    "notes": "Impressive architectural photography of one of England's finest Gothic cathedrals. The west front showcases remarkable medieval craftsmanship. Appeals to those interested in British heritage and ecclesiastical architecture, though the black and white format limits broader decorative appeal.",
+    "batch": 2,
+    "pageText": "Glorious West Front of York Minster",
+    "stars": 3
   }
 ]
