@@ -480,17 +480,15 @@ function setRating(fileId, newRating) {
     // Save to localStorage
     saveCustomRating(fileId, newRating);
 
-    // Re-render
+    // Re-render gallery
     filterAndSort();
 
-    // Update modal if open
-    if (currentModalIndex >= 0) {
-        const modalItem = filteredData[currentModalIndex];
-        if (modalItem && modalItem.file === fileId) {
-            document.getElementById('modalStars').innerHTML = getStars(newRating, true);
-            attachStarListeners(fileId);
-        }
-    }
+    // Update modal stars directly (don't rely on currentModalIndex which may have changed)
+    document.getElementById('modalStars').innerHTML = getStars(newRating, true);
+    attachStarListeners(fileId);
+
+    // Update currentModalIndex to new position after re-sort
+    currentModalIndex = filteredData.findIndex(i => i.file === fileId);
 }
 
 // Attach click listeners to modal stars
