@@ -433,15 +433,15 @@ function filterAndSort() {
     updateStats();
 }
 
-function getStars(n, interactive = false) {
-    if (!interactive) {
+function getStars(n, fileId = null) {
+    if (!fileId) {
         return '★'.repeat(n) + '<span class="stars-muted">' + '★'.repeat(5-n) + '</span>';
     }
     // Interactive stars for modal
     let html = '';
     for (let i = 1; i <= 5; i++) {
         const color = i <= n ? '#d4af37' : '#444';
-        html += `<span class="star" data-rating="${i}" style="color: ${color}">★</span>`;
+        html += `<span class="star" onclick="setRating('${fileId}', ${i})" style="color: ${color}; cursor: pointer;">★</span>`;
     }
     return html;
 }
@@ -483,23 +483,11 @@ function setRating(fileId, newRating) {
     // Re-render gallery
     filterAndSort();
 
-    // Update modal stars directly (don't rely on currentModalIndex which may have changed)
-    document.getElementById('modalStars').innerHTML = getStars(newRating, true);
-    attachStarListeners(fileId);
+    // Update modal stars directly
+    document.getElementById('modalStars').innerHTML = getStars(newRating, fileId);
 
     // Update currentModalIndex to new position after re-sort
     currentModalIndex = filteredData.findIndex(i => i.file === fileId);
-}
-
-// Attach click listeners to modal stars
-function attachStarListeners(fileId) {
-    document.querySelectorAll('#modalStars .star').forEach(star => {
-        star.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const rating = parseInt(star.dataset.rating);
-            setRating(fileId, rating);
-        });
-    });
 }
 
 function renderGallery() {
@@ -527,12 +515,9 @@ function openModal(index) {
 
     document.getElementById('modalImage').src = `images/IMG_${item.file}.jpg`;
     document.getElementById('modalTitle').textContent = item.subject;
-    document.getElementById('modalStars').innerHTML = getStars(item.stars, true);
+    document.getElementById('modalStars').innerHTML = getStars(item.stars, item.file);
     document.getElementById('modalDescription').textContent = item.description;
     document.getElementById('modalNotes').textContent = item.notes;
-
-    // Attach star click listeners
-    attachStarListeners(item.file);
 
     const pageTextSection = document.getElementById('modalPageTextSection');
     if (item.pageText) {
