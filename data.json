@@ -2438,5 +2438,55 @@
     "batch": 2,
     "pageText": "The Bliss of Solitude",
     "stars": 4
+  },
+  {
+    "file": "5963",
+    "subject": "Matterhorn Reflection",
+    "description": "B&W photograph of the iconic Matterhorn peak reflected in Alpine lake.",
+    "verdict": "yes",
+    "notes": "The ultimate Alpine icon - the distinctive pyramid of the Matterhorn perfectly reflected in still waters. First climbed by Whymper in 1865, it remains mountaineering's supreme challenge. Classic imagery for mountain lovers.",
+    "batch": 2,
+    "pageText": "The Climber's Supreme Challenge",
+    "stars": 4
+  },
+  {
+    "file": "5964",
+    "subject": "Austrian Tirol Alps",
+    "description": "B&W photograph of Alpine lake near Kufstein with snow-clad peaks reflected in still water.",
+    "verdict": "yes",
+    "notes": "Serene Alpine perfection - snow-capped peaks mirrored in glass-still water near Kufstein. The peaceful composition through foreground trees creates a contemplative atmosphere. Beautiful for those who love mountain scenery.",
+    "batch": 2,
+    "pageText": "The Greatest Mountain System of Europe",
+    "stars": 4
+  },
+  {
+    "file": "5965",
+    "subject": "Engadine Spring Meadow",
+    "description": "B&W photograph of Swiss Alpine meadow covered in spring flowers with snow-clad peaks behind.",
+    "verdict": "yes",
+    "notes": "Poetic contrast of ephemeral spring flowers against eternal snows - millions of blooms carpeting the Engadine valley below the Rhaetian Alps. The title \"Eternal and Transitory\" captures this perfectly. Romantic Alpine scene.",
+    "batch": 2,
+    "pageText": "The Eternal and the Transitory",
+    "stars": 4
+  },
+  {
+    "file": "5966",
+    "subject": "Blast Furnace Iron",
+    "description": "B&W photograph of molten iron flowing from blast furnace into sand channels.",
+    "verdict": "maybe",
+    "notes": "Dramatic industrial photography - rivers of molten iron glowing white-hot flowing from the furnace. The elemental power of steelmaking has a certain raw beauty. Appeals to industrial history enthusiasts.",
+    "batch": 2,
+    "pageText": "The Iron Flows Free of the Ore",
+    "stars": 3
+  },
+  {
+    "file": "5967",
+    "subject": "Australian Wildlife",
+    "description": "B&W photographs of Australian fauna including kookaburra, koala, cassowary, and wombat.",
+    "verdict": "maybe",
+    "notes": "Charming compilation of uniquely Australian creatures - the laughing kookaburra, cuddly koala, flightless cassowary, and shy wombat. Good for wildlife enthusiasts and Australiana collectors.",
+    "batch": 2,
+    "pageText": "Strange Beasts and Birds of Australia",
+    "stars": 3
   }
 ]
